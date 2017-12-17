@@ -1,0 +1,14 @@
+html, body {
+    height: 100%;
+    font-size: 1em;
+    outline: none;
+}
+body {
+    -webkit-user-select: none;
+    background-color: #f9f9f9;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}

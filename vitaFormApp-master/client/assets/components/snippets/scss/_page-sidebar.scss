@@ -1,0 +1,36 @@
+#page-sidebar {
+    width: 200px;
+    position: absolute;
+    border-right: 1px solid #ccc;
+}
+@media (min-width: 980px)
+    .nav-collapse.collapse {
+        height: auto!important;
+        overflow: visible!important;
+    }
+}
+#primary-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;
+}
+#primary-nav li a {
+    display: block;
+    margin: 5px 0 0;
+    background-color: #e9e9e9;
+    color: #999;
+    padding: 9px 10px 6px 40px;
+}
+#primary-nav li.active > ul {
+    display: block;
+}
+#primary-nav li > ul {
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+#primary-nav li > ul a {
+    margin: 0;
+    background: #eee;
+    font-size: 13px;
+}

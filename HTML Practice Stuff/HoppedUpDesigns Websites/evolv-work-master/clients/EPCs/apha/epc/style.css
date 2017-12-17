@@ -1,0 +1,345 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0b1 | 201101 
+   Reset
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* Basics */
+
+html, input, select, textarea {} body {
+    background-image: url("http://www.highroadsolution.com/clients/apha/epc/images/APhA-bg.png");
+    background-position: center top;
+    color: #575757;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: normal;
+}
+p {
+    margin-bottom: 1em;
+}
+strong {
+    font-weight: bold;
+}
+.content-main td, .inner-content td {
+    padding: 0 5px 15px 0;
+}
+img {
+    vertical-align: middle;
+    max-width: 100% !important;
+    height: auto;
+}
+a:link {
+    color: #4479d3;
+    text-decoration: none;
+}
+a:hover {
+    color: #252525;
+}
+a:visited {
+    color: #4479d3;
+}
+/* Layout */
+
+.wrapper {
+    margin: 0 auto;
+}
+#content {
+    max-width: 786px;
+    margin: 0 auto;
+}
+.clear {
+    clear: both;
+}
+.content-main {
+    min-height: 200px;
+    border: 2px solid #D3D6D9;
+}
+.content {
+    clear: left;
+    background-color: #fff;
+    margin: 0 auto;
+}
+.inner-content {
+    border: 2px solid #D3D6D9;
+    padding: 27px 35px;
+}
+h1, h2 {
+    color: #4E8AB3;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 38px;
+    padding: 0 0 0 8px;
+    text-transform: uppercase;
+    padding: 15px 0px;
+}
+.opt-out-content {
+  line-height: 1.5;
+}
+h2 {
+    font-size: 18px;
+    line-height: 22px;
+}
+.subtitle {
+    color: #A5004E;
+    font-weight: 300;
+    font-family: 'Open Sans';
+    font-size: 17px;
+    line-height: 20px;
+}
+td.padding-left {
+    padding-left: 5px;
+}
+td.line-bar {
+    border-top: 1px solid #4E8AB3;
+    margin: 5px 0;
+    max-width: 80%;
+}
+/*Header*/
+
+#content, #content-header, .footer-contacts {
+    margin: 0 auto;
+    max-width: 786px;
+}
+#content-header a {
+    padding-top: 20px;
+}
+.header-top-bg {
+    background-image: url("http://www.highroadsolution.com/clients/apha/epc/images/APhA-header-bg-new.png");
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    min-height: 150px;
+    padding-top: 20px;
+}
+#logo {
+    padding: 20px 0;
+}
+/* Footer */
+
+.footer-top {
+    background-color: #3D0520;
+    height: 8px;
+}
+.footer-logo {
+    float: left;
+}
+.footer-container-repeat {
+    background: url("http://www.highroadsolution.com/clients/apha/epc/images/APhA-footer-bg-repeat.png");
+    background-position: 0 bottom;
+    background-repeat: repeat-x;
+    min-height: 200px;
+}
+.footer-address {
+    color: #0062A0;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 26px 0 0 20px;
+}
+.footer-tel {
+    color: #8AAFBF;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 41px 0 0 20px;
+}
+.footer-policy-privacy {
+    float: right;
+    height: 45px;
+    margin: 26px 0 0 0px;
+    padding: 0 0 0 44px;
+}
+.footer-fax {
+    color: #8AAFBF;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 41px 0 0 20px;
+}
+.footer-tel span.number, .footer-fax span.number {
+    color: #0062A0;
+}
+.footer-privacy a, .footer-terms a {
+    color: #FFF87F;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    text-decoration: none;
+}
+.copyright {
+    color: #D3E0E5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+}
+/* Specifics */
+
+#optout_message {
+    color: #e31b23;
+    margin: 8px 0;
+}
+.email {
+    margin: 0 0 25px 0;
+}
+.note {
+    color: #e31b23;
+    margin-left: 105px;
+}
+label.emailaddy {
+    display: inline-block;
+    width: 101px;
+}
+/* Buttons/Forms */
+
+input[type="text"], input[type="email"] {
+    min-width: 150px;
+    margin: 0 0 5px 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid #cfcfcf;
+    padding: 4px 6px;
+    font-size: 13px;
+}
+input[type="text"]:focus, input[type="email"]:focus {
+    border: 1px solid #999;
+}
+input[type="submit"] {
+    color: #fff;
+    padding: 7px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.button {
+    background: #4E8aB3;
+    background: -moz-linear-gradient(top, #3b85c4 0%, #4E8aB3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b85c4), color-stop(100%, #4E8aB3));
+    background: -webkit-linear-gradient(top, #3b85c4 0%, #4E8aB3 100%);
+    background: -o-linear-gradient(top, #3b85c4 0%, #4E8aB3 100%);
+    background: -ms-linear-gradient(top, #3b85c4 0%, #4E8aB3 100%);
+    background: linear-gradient(to bottom, #3b85c4 0%, #4E8aB3 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3b85c4', endColorstr='#4E8aB3', GradientType=0);
+}
+.button_red {
+    background: #ea5840;
+    background: -moz-linear-gradient(top, #ea5840 0%, #E31B23 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ea5840), color-stop(100%, #E31B23));
+    background: -webkit-linear-gradient(top, #ea5840 0%, #E31B23 100%);
+    background: -o-linear-gradient(top, #ea5840 0%, #E31B23 100%);
+    background: -ms-linear-gradient(top, #ea5840 0%, #E31B23 100%);
+    background: linear-gradient(to bottom, #ea5840 0%, #E31B23 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ea5840', endColorstr='#E31B23', GradientType=0);
+}
+.button:hover {
+    background: #3b85c4;
+    background: -moz-linear-gradient(top, #3b85c4 0%, #338ad0 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b85c4), color-stop(100%, #338ad0));
+    background: -webkit-linear-gradient(top, #3b85c4 0%, #338ad0 100%);
+    background: -o-linear-gradient(top, #3b85c4 0%, #338ad0 100%);
+    background: -ms-linear-gradient(top, #3b85c4 0%, #338ad0 100%);
+    background: linear-gradient(to bottom, #3b85c4 0%, #338ad0 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3b85c4', endColorstr='#338ad0', GradientType=0);
+}
+#cmdOptOut {
+    margin-top: 10px;
+}
+table.search-table {
+    width: 90%;
+    margin: 10px;
+}
+.center-gif img {
+    margin: 100px 30%;
+}
+.error {
+    color: #ea5840;
+}
+@media (max-width: 740px) {
+    h1, h2 {
+        padding-left: 10px;
+    }
+    h1 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .content-header, .footer-contacts {
+        padding: 10px 20px;
+    }
+    .footer-policy-privacy {
+        display: block;
+        width: 100%;
+        margin: -30px 0 0 25%;
+        padding: 0px;
+    }
+    .footer-terms a, .footer-privacy a {
+        display: block;
+        font-size: 12px;
+        line-height: 18px;
+        margin-left: 25%;
+    }
+}
+@media (max-width: 640px) {
+    h1 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .footer-address {
+        display: none;
+    }
+    .footer-fax, .footer-tel {
+        padding: 20px 0 0 20px;
+    }
+}
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .inner-content {
+        padding: 27px 20px;
+    }
+}

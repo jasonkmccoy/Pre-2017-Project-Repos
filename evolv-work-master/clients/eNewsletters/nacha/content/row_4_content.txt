@@ -1,0 +1,15 @@
+<!-- ROW 4 -->
+<tr>
+    <td>
+        <!-- CROWD IMAGE -->
+        <img src="images/finished_images/crowd_picture.png" alt="picture of convention attendees" width="204" height="137" />
+        <!-- PARAGRAPH 1 -->
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacus lectus, posuere a magna ut, pulvinar placerat nulla. Suspendisse neque ligula, eleifend at malesuada quis, vulputate vel mi. Vestibulum laoreet
+        <!-- LEARN MORE + REGISTER BUTTON -->
+        <a href="https://www.nacha.org/" target="_blank">LEARN MORE + REGISTER</a>
+        <!-- HEADING FOR PARAGRAPH 2 -->
+        <h2>REGISTER NOW AND SAVE $250</h2>
+        <!-- PARAGRAPH 2 -->
+        Fusce augue augue, ornare at pellentesque at, tincidunt vitae lacus. Suspendisse egestas, tortor quis elementum laoreet, augue odio tempor dolor, vel aliquam tortor lorem quis metus.  <a href="https://payments.nacha.org/"  target="_blank">Register Now</a> 
+    </td>
+</tr>

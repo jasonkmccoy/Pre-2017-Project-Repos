@@ -1,0 +1,55 @@
+/***************************
+****************************
+  
+   These are the styles for
+    Transform to Chatbox
+
+****************************
+***************************/
+
+.resize-textarea {
+    height: 78px !important;
+}
+#chat-window {
+    position: relative;
+    height: 0px;
+    width: 99.3%;
+    top: -277px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-color: rgb(238, 238, 238);
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    z-index: 0;
+}
+#window-header {
+    background-color: #e6e6e6;
+    height: 10%;
+    position: relative;
+    width: 100%;
+}
+#status-message {
+    font-size: 13px;
+    font-weight: 500;
+    left: 3%;
+    position: relative;
+    top: 5%;
+}
+.collapsed-window {
+    border: none !important;
+    visibility: hidden;
+}
+#customer-chat-widget {
+    margin-right: -330px;
+}
+.chat_slider_el {
+    left: 0px;
+}
+#message-textarea {
+    top: 0px;
+}
+#chat-window {
+    top: 0px;
+    height: 0px;
+}

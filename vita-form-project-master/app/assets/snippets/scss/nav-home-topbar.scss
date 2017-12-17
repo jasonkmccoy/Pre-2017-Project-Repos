@@ -1,0 +1,23 @@
+.nav-home-topbar {
+    width: 48.813em;
+    height: 1.875em;
+    padding: 0;
+    border-bottom: 1px solid #ddd;
+    background-color: #f6f6f6;
+    display: block;
+    @include span-columns(10);
+    @include shift(2);
+}
+.nav-home-topbar a {
+    font-size: 1em;
+    line-height: em(33);
+    color: #555;
+    height: 12px;
+    width: 12px;
+    margin: 0.9375em;
+}
+.fa .fa-home {
+    display: inline;
+    width: auto;
+    height: auto;
+}

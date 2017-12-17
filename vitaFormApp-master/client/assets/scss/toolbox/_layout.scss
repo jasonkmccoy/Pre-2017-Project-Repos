@@ -1,0 +1,322 @@
+// 5. Layout Styles
+#page-wrapper {
+    width: 100%;
+    min-width: 320px;
+    max-width: 1920px;
+}
+#inner-container {
+    background-color: #ddd;
+}
+.main-content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+  The core grid elements:
+   - Frame
+   - Block
+   - Content block
+   - Container
+*/
+.grid-frame {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    -webkit-flex: 1 1;
+    -ms-flex: 1 1;
+    flex: 1 1;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+}
+.grid-block {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    -webkit-flex: 1 1;
+    -ms-flex: 1 1;
+    flex: 1 1;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    height: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.grid-content .grid-block {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+.grid-content {
+    display: block;
+    padding: 0 1rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-flex: 1 1;
+    -ms-flex: 1 1;
+    flex: 1 1;
+}
+.grid-content.collapse {
+    padding: 0;
+}
+.grid-container {
+    max-width: 56.25rem;
+    margin: 0 auto;
+}
+.grid-container.contain-left {
+    max-width: 56.25rem;
+    margin: 0 auto 0 0;
+}
+.grid-container.contain-right {
+    max-width: 56.25rem;
+    margin: 0 0 0 auto;
+}
+/*
+  Breakpoint classes for blocks
+*/
+
+.small-grid-block {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    -webkit-flex: 1 1;
+    -ms-flex: 1 1;
+    flex: 1 1;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    height: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.small-grid-block.panel {
+    -webkit-transform: none;
+    transform: none;
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: auto;
+    box-shadow: none;
+    background: transparent;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+}
+.small-grid-content {
+    display: block;
+    padding: 0 1rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-flex: 1 1;
+    -ms-flex: 1 1;
+    flex: 1 1;
+}
+.small-grid-content.panel {
+    -webkit-transform: none;
+    transform: none;
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: auto;
+    box-shadow: none;
+    background: transparent;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+}
+@media only screen and (min-width: 40em) {
+    .medium-grid-block {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        -webkit-flex: 1 1;
+        -ms-flex: 1 1;
+        flex: 1 1;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        height: auto;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+    .medium-grid-block.panel {
+        -webkit-transform: none;
+        transform: none;
+        position: relative;
+        width: auto;
+        height: auto;
+        z-index: auto;
+        box-shadow: none;
+        background: transparent;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+    }
+}
+@media only screen and (min-width: 40em) {
+    .medium-grid-content {
+        display: block;
+        padding: 0 1rem;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        -webkit-flex: 1 1;
+        -ms-flex: 1 1;
+        flex: 1 1;
+    }
+    .medium-grid-content.panel {
+        -webkit-transform: none;
+        transform: none;
+        position: relative;
+        width: auto;
+        height: auto;
+        z-index: auto;
+        box-shadow: none;
+        background: transparent;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+    }
+}
+@media only screen and (min-width: 75em) {
+    .large-grid-block {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        -webkit-flex: 1 1;
+        -ms-flex: 1 1;
+        flex: 1 1;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        height: auto;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+    .large-grid-block.panel {
+        -webkit-transform: none;
+        transform: none;
+        position: relative;
+        width: auto;
+        height: auto;
+        z-index: auto;
+        box-shadow: none;
+        background: transparent;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+    }
+}
+@media only screen and (min-width: 75em) {
+    .large-grid-content {
+        display: block;
+        padding: 0 1rem;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        -webkit-flex: 1 1;
+        -ms-flex: 1 1;
+        flex: 1 1;
+    }
+    .large-grid-content.panel {
+        -webkit-transform: none;
+        transform: none;
+        position: relative;
+        width: auto;
+        height: auto;
+        z-index: auto;
+        box-shadow: none;
+        background: transparent;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+    }
+}

@@ -1,0 +1,17 @@
+/* style.less */
+
+/*Ingredients*/
+@import "ingredients/_reset.scss";
+@import "ingredients/_algorithm.scss";
+
+/*Recipes*/
+@import "recipes/_typography.scss";
+@import "recipes/_img.scss";
+@import "recipes/_links.scss";
+@import "recipes/_layout.scss";
+@import "recipes/_nav.scss";
+@import "recipes/_table.scss";
+
+/* Desktop Breakpoint Recipes*/
+@import "recipes/desktop_breakpoint/_desktop_layout.scss";
+@import "recipes/desktop_breakpoint/_desktop_header_nav.scss";

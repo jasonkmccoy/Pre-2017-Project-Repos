@@ -1,0 +1,160 @@
+/**
+ * login-form styles
+ */
+.container {
+    background: linear-gradient(to bottom, #f7f7f7 0%, #efefef 100%);
+    width: 320px;
+    height: auto;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 2.4px;
+    @include centerMe(absolute, 320px, 270px);
+
+    * {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    #header, #content {
+        @include box-sizing (border-box);
+        position: relative;
+    }
+
+    #header {
+        background: linear-gradient(to bottom, #f7f7f7 0%, #efefef 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        border-bottom: 2px solid #a0a0a0;
+        @include prefixer(border-top-left-radius, 3.4px, webkit);
+        @include prefixer(border-top-left-radius, 3.4px, moz);
+        @include prefixer(border-top-left-radius, 3.4px, ms);
+        @include prefixer(border-top-left-radius, 3.4px, o);
+        @include prefixer(border-top-right-radius, 2.7px, webkit);
+        @include prefixer(border-top-right-radius, 2.7px, moz);
+        @include prefixer(border-top-right-radius, 2.7px, ms);
+        @include prefixer(border-top-right-radius, 2.7px, o);
+        @include prefixer(border-bottom-left-radius, 0.6px, webkit);
+        @include prefixer(border-bottom-left-radius, 0.6px, moz);
+        @include prefixer(border-bottom-left-radius, 0.6px, ms);
+        @include prefixer(border-bottom-left-radius, 0.6px, o);
+        height: 43px;
+        position: relative;
+        top: 1px;
+        width: 100%;
+    }
+
+    #header span {
+        display: block;
+        font-size: 19px;
+        font-weight: bold;
+        padding-top: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    #content {
+        height: 90px;
+        margin: 20px 5px 5px 5px;
+    }
+}
+
+.vita-form {
+    display: inline-block;
+    width: auto;
+    float: left;
+
+    input {
+        &[type="text"], &[type="password"] {
+            padding-left: 5px;
+            background-color: #FFF;
+            border: 1px solid #ADADAD;
+            border-radius: 3px;
+            height: 22px;
+            width: 200px;
+            float: left;
+            &:focus {
+                border-color: #505050;
+            }
+        }
+    }
+}
+
+.sprite-input-container {
+    margin: 0;
+    padding: 0;
+    width: auto;
+
+    .sprite-container {
+        border-left: 1px solid rgb(80, 80, 80);
+        width: 21px;
+        height: 18px;
+        float: right;
+        clear: both;
+        position: relative;
+        bottom: 21px;
+        right: 24px;
+
+        div {
+            left: 4px;
+            top: 1px;
+            position: relative;
+        }
+
+        .user-active {
+            left: 4px !important;
+            top: 0.5px !important;
+        }
+
+        .password-active {
+            left: 4px !important;
+            top: 4.6px;
+        }
+    }
+}
+
+.user {
+    background-position: 0 -24px;
+    width: 16px;
+    height: 15px;
+}
+
+.user-active {
+    background-position: -20px -24px;
+    width: 16px;
+    height: 15px;
+}
+
+.password {
+    background-position: 0 -43px;
+    width: 16px;
+    height: 8px;
+}
+
+.password-active {
+    background-position: -18px -44px;
+    width: 15px;
+    height: 8px;
+}
+
+#password {
+    margin-top: 10px;
+}
+.login-button {
+    background-position: -124px 0;
+    width: 24px;
+    height: 39px;
+    float: left;
+    position: relative;
+    top: 19px;
+    right: -28px;
+    @include transform(scale(1.65));
+    display: inline-block;
+}
+
+.centered-inputs {
+    position: relative;
+    top: 7px;
+    left: 35px;
+}
+
+.start {
+    text-align: center;
+    margin: 20px auto;
+}
+

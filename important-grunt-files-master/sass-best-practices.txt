@@ -1,0 +1,2137 @@
+Naming Conventions:
+
+1. Name functions using Pascal formatting.  This means capitalizing each word in the function.
+    Example:
+        @function MakeColor ($color) {
+            @return $color * #010;  
+        }
+
+2. Name mixins using camelCase formatting.
+    Example:
+        @mixin textFormat($size, $family, $color) {
+          font: {
+            size: $size;
+            family: $family;
+          };
+          color: MakeColor($color);
+        }
+
+3. Name Sass selectors using lowercase words separated with a hyphen.
+    Example:
+        .site-header {
+          @include textFormat(12px, verdana, red);
+        }
+
+Declaration, Mixin and Placeholder Listing Consistency:
+
+4. When using mixins it is absolutely preferred to use
+   the add include directive within the first CSS rule within the selector.
+   Example:
+    .foo {
+        @include textFormat(12px, verdana, red);
+        padding: 10px;
+        width: 50%;
+        .nested-foo {
+            background-color: green;
+        }
+    }
+
+5.  If you are using the add extension directive,
+    list it first just as you would when using the add include directive
+    as shown above in #4
+        Example:
+            .foo {
+                @extend .block;
+                padding: 10px;
+                width: 50%;
+                .nested-foo {
+                    background-color: green;
+                }
+            }
+
+6.  If you are using both the add include directive AND the add extension directive,
+    add the @include first and the @extend second in the Sass rule.
+        Example:
+            .foo {
+                @include textFormat(12px, verdana, red);
+                @extend .block;
+                padding: 10px;
+                width: 50%;
+                .nested-foo {
+                    background-color: green;
+                }
+            }
+
+7.  NOTE: KEEP IN MIND WHERE YOU PUT THE @INCLUDES AND @EXTENDS IN YOUR SASS FILE AS THIS WILL AFFECT THE CASCADE  
+          AND ANY STYLE OVERRIDES!!!
+
+Partials:
+
+8.  It's not the best practice to have all your code in one place.
+
+9.  Break your code up in smaller, easier to manage chunks of code called partials.
+
+10. A partial is any file with an underscore preceding the name.
+    Example:
+        _tables.scss
+
+11. Common convention for the Sass files needed in a project:
+        _base.scss
+        _functions.scss
+        _layout.scss
+        _mixins.scss
+        _modules.scss
+        _reset.scss
+        _state.scss
+        _theme.scss
+        _variables.scss
+        application.scss
+
+12. Command line operation to watch all Sass files as they are converted to CSS:
+        sass --watch sass:css
+
+Manifests:
+
+13. The application.scss file here is what's commonly referred to as the core manifest file.
+
+14. To include all the partials in your core manifest file, import the partials.
+    Be careful about the order of the imports!  Use the format in the example below.
+        Example:
+            @import "variables";
+            @import "functions";
+            @import "mixins";
+
+            @import "reset";
+
+            @import "base";
+            @import "modules";
+            @import "state";
+            @import "layout";
+            @import "theme";
+
+15. If you are going to include a large Sass library like Compass for example,
+    import any Compass files FIRST before any of your code is imported!
+        Example:
+            @import "compass";
+
+            @import "variables";
+            @import "functions";
+            @import "mixins";
+
+            @import "reset";
+
+            @import "base";
+            @import "modules";
+            @import "state";
+            @import "layout";
+            @import "theme";
+
+16. If you are going to include any plugins, you want to add those imports LAST!
+        Example:
+            @import "compass";
+
+            @import "variables";
+            @import "functions";
+            @import "mixins";
+
+            @import "reset";
+
+            @import "base";
+            @import "modules";
+            @import "state";
+            @import "layout";
+            @import "theme";
+
+            @import "plug-in";
+
+17. Create a folder called "mixins".
+    Move the _mixins.scss file to this folder and rename it _manifest.scss
+    In this folder, create files for the various mixins such as _grid.scss, _tables.scss, etc.
+
+18. In the _manifest.scss file, import the various mixins files.
+        Example:
+            @import "grid";
+            @import "tables";
+
+19. Now that we have a "mixins" folder, we need to update the application.scss file imports.
+        Example:
+            @import "compass";
+
+            @import "variables";
+            @import "functions";
+            @import "mixins/manifest";
+
+            @import "reset";
+
+            @import "base";
+            @import "modules";
+            @import "state";
+            @import "layout";
+            @import "theme";
+
+            @import "plug-in";
+
+Globbing:
+
+20. Globbing refers to pattern matching based on wildcard characters that allows Sass to assemble all the 
+    partials within a directory without a specific manifest file.
+
+21. Sass globbing allows you to import many sass or scss files in a single import statement.
+
+22. You will need to install the Ruby gem for globbing in order to use it.
+        Command-line operation:
+            sudo gem install sass-globbing
+
+23. To use Sass globbing in the command line, you MUST use the command below.
+    You can't use the command:  sass --watch sass:css
+    instead use the command below:
+        Command-line operation:
+            sass -r sass-globbing --watch sass:css
+
+24. If you have a lot of partials in the "mixins" folder,
+    you can import all these partials using one @import using the "*" wildcard character.
+        Example:
+            @import "mixins/*";
+
+25. If you have folders within folders such as "mixins"->"functions",
+    then use the syntax of the following example.
+        Example:
+            @import "mixins/**/*";
+
+26. NOTE: CSS is order dependent, as such, using this approach within your stylesheets to import styles 
+          that depend on the stylesheet's cascade creates an opportunity for styles to change more 
+          unpredictably than a manually asserted order. It is recommended that you only use globbing 
+          where order is unimportant; E.g. importing of library files.
+
+27. Sass globbing imports the files in ALPHABETICAL order, this is why you must be careful about the cascade!!!!
+
+Sass Line Comments:
+
+28. For debugging, when can find out what line number as Sass rule is on using the -l option.
+    This will show all the Sass rules within the Terminal window.
+        Command-line operation:
+            sass -l application.scss
+
+29. A better option is to create a CSS file that shows these line numbers.
+        Command-line operation:
+            sass -l application.scss:style.css
+
+30. To debug in the browser, use a python command (don't have to know anything about python to use this).
+        Command-line operation:
+            python -m SimpleHTTPServer
+
+31. Now you can open the HTML files by going to:
+        localhost:8000/FILE-DIRECTORY/FILE-NAME
+
+32. This is useful because it lets you click on the source file when you use "Inspect Element" (i.e. you click on style.css)
+    This will open the style.css file inside the Inspector and put the cursor right where you need it.
+
+Source Maps:
+
+33. To use maps, there are two things that need to happen. 
+    1. tell Inspector to use maps
+    2. tell Sass to output maps.
+
+34. To  use maps inside the Inspector, go to "Settings" in the Inspector and enable these settings:
+        1. Bracket matching
+        2. Enable CSS source maps
+        3. Auto-reload generated CSS
+
+35. To tell Sass to output maps, use the following command line operation:
+        Command-line operation:
+            sass --sourcemap app.scss:style.css
+
+36. This will add a file called "style.css.map" into the CSS folder
+
+37. Now in the "style.css" file, there is a line that points to the "style.css.map" file
+        Example:
+            /*# sourceMappingURL=style.css.map */
+
+38. Now when you use the Inspector in Chrome and "Inspect Element",
+    you will see the Sass .scss file that the styles NOT the .css file
+
+39. You can edit the Sass rules within the browser "Inspector" by watching the Sass
+    files in Terminal:
+        Command-line operation:
+            sass --sourcemap --watch app.scss:style.css
+
+40. Now you will need to create a "Workspace" inside of Chrome.
+    Do this by going to:
+        "Settings"->"Workspace"->"Folders" and clicking on "Add folder..."
+
+41. Find the project you are working on and then click on "Select"
+
+42. This will cause a popup to appear in Chrome that says:
+        DevTools requests full access to /Users/jason/sandbox/PROJECT
+
+43. Click "Allow" 
+
+44. Now you will see your project listed on the left-hand side of the "Inspector"
+
+45. Go to the application.scss file inside this project folder,
+    double click on the application.scss file and select "Map to Network Resource"
+
+46. Click on the application.scss in the new window that appears.
+
+47. This will popup a Chrome modal window, click "OK"
+
+48. Now you can edit Sass rules inside the DevTools "Inspector"
+    Save your work the same way you would in a text editor (cmd + s)
+
+49. These changes that you make inside "Inspector" will be saved to the
+    actual application.scss:style.css files in your project folder.
+
+50. Use will also notice that the new Sass rules are applied to the browser window
+    output without doing a page reload.
+
+Scoping and !default Variables
+
+51. Currently in Sass, all variables declared outside of a mixin or function will 
+    have a global scope and can be referenced in other imported Sass files. 
+
+52. Example:
+        $text-color: blue;
+
+        .error {
+            $text-color: red;
+            color: $text-color;
+        }
+
+        .normal-text {
+            color: $text-color;
+        }
+
+53. You expect that .normal-text will have color: blue but actually
+    the color will be red.
+
+54. This is because all variables set in Sass have global scope 
+    by default and if you change this global variable, you have changed
+    the variable globally and any reference to this global variable will
+    have the changed value NOT the original value.
+
+55. If you want the changed value to be applied globally, use the following rule:
+        Example:
+        $text-color: blue;
+
+        .error {
+            $text-color: red !global;
+            color: $text-color;
+        }
+
+        .normal-text {
+            color: $text-color;
+        }
+
+Variables and Arguments within Mixins and Functions:
+
+56. NOTE: Arguments used within mixins or functions are NEVER global!!!
+
+57. Example:
+    $var: yellow;
+
+    @mixin foo($var) {
+        color: $var;
+    }
+
+    .block {
+        @include foo;
+    }
+
+58. This will cause a syntax error because the $var inside the @mixin is NOT
+    the same as the $var that was declared globally.
+
+59.  To fix this, we change the code like this:
+        Example:
+            $var: yellow;
+
+            @mixin foo($var: $var) {
+                color: $var;
+            }
+
+            .block {
+                @include foo;
+            }
+
+60. A better way to do this is as follows:
+        Example:
+            $default-var: yellow;
+
+            @mixin foo($default-var) {
+                color: $var;
+            }
+
+            .block {
+                @include foo;
+            }
+
+61. What if we change the value of $var within the @mixin foo()?
+
+62. Example:
+        $var: yellow;
+
+        @mixin foo($var: $var) {
+            global-color: $var;
+            $var: purple;
+            scoped-color: $var;
+        }
+
+        .block {
+            @include foo;
+            $var: lime;
+        }
+
+        .bar {
+            global-color: $var;
+        }
+
+63. What happens in the example above?
+        1. .block will look like this:
+                .block {
+                    global-color: yellow;
+                    scoped-color: purple;
+                }
+        2. .bar will look like this:
+                .bar {
+                    global-color: lime;
+                }
+
+64. On the other hand, using the bang default flag (!default) on the variable sets the value for
+    the variable, but it's easily overridden without dependency on the cascade.
+    What does this mean?
+
+65. Example:
+        // included from a config file
+        $default-var: green;
+
+        // included from a mixin
+        $default-var: yellow !default;
+        @mixin foo($var: $default-var) {
+            color: $var;
+        }
+
+        .block {
+            @include foo;
+        }
+
+66. What do this do?
+        What this code is saying is:
+            1. If a default value has NOT been set, use the !default value defined.
+            2. If a default value has been set, use that value.
+            3. Since in the Example above a default value has been set ($default-var: green;),
+               that color will be used as the default color for the @include foo; will be green
+            4. If we get rid of the $default-var: green; variable,
+               then the default color for the @include foo; will be yellow
+
+Better Variables with List-maps
+
+67. Common way variables are named and used:
+        // establish a core color
+        $core-gray: #333;
+
+        // assign core color to a more semantic variable
+        $input-disabled-color: $core-gray;
+
+        // use semantic variable as assigned to additional semantics
+        $input-disabled-background: lighten($input-disabled-color, 75%);
+        $input-disabled-border: lighten($input-disabled-color, 50%);
+        $input-disabled-text: lighten($input-disabled-color, 25%);
+
+        // use variable in an input[disabled]
+        input[disabled] {
+            background-color: $input-disabled-background;
+            border-color: $input-disabled-border;
+            color: $input-disabled-text;
+        }
+
+68. A new and better way to do this is to use maps.
+        Example:
+            // establish a core color
+            $core-gray: #333;
+
+            // assign core color to a more semantic variable
+            $input-disabled-color: $core-gray;
+
+            // use semantic variable as assigned to additional semantics
+            input: (
+                $input-disabled-background: lighten($input-disabled-color, 75%);
+                $input-disabled-border: lighten($input-disabled-color, 50%);
+                $input-disabled-text: lighten($input-disabled-color, 25%);
+            );
+            
+            // use variable in an input[disabled]
+            input[disabled] {
+                background-color: map-get($input, disabled-background);
+                border-color: map-get($input, disabled-border);
+                color: map-get($input, disabled-text);
+            }
+
+Nesting:
+
+69. Example of old way of nesting:
+        $var: (
+            key (
+                key value,
+                key value,
+                key (
+                    key value,
+                    key value,
+                )
+            )
+        )
+
+70. Better way of nesting using the map-get-z() function:
+        @import "sass-list-maps";
+
+        // establish a core color
+        $core-gray: #333;
+
+        // assign core color to a more semantic variable
+        $input-disabled-color: $core-gray;
+
+        // use semantic variable as assigned to additional semantics
+        input: (
+            disabled (
+                background lighten($input-disabled-color, 75%);
+                border lighten($input-disabled-color, 50%);
+                text lighten($input-disabled-color, 25%);
+            )
+        );
+        
+        // use variable in an input[disabled]
+        input[disabled] {
+            background-color: map-get-z($input, disabled, background);
+            border-color: map-get-z($input, disabled, border);
+            color: map-get-z($input, disabled, text);
+        }
+
+        $var: (
+            key (
+                key value,
+                key value,
+                key (
+                    key value,
+                    key value,
+                )
+            )
+        )
+
+Advanced Mixins:
+
+71. When using mixins that require arguments,
+    it is a best practice to always specify a default value for each argument.
+
+72. Simple Example:
+        @mixin foo($arg: default-value) {
+            // mixin code
+        }
+
+73. Better way to do this is to create variables with default values and then
+    add these variables as arguments in the @mixin:
+        $add-border-position: all !default;
+        $add-border-size: 1px !default;
+        $add-border-pattern: solid !default;
+        $add-border-color: #999 !default;
+
+        $add-border (
+            position all,
+            size 1px,
+            pattern solid,
+            color #999
+        ) !default;
+
+        @mixin add-border($position: $add-border-position, 
+            $size: $add-border-size, 
+            $pattern: $add-border-pattern, 
+            $color: $add-border-color) {
+            
+            @if $position == all {
+                border: $position $pattern $color;
+            } @else {
+                border-#{$position}: $size, $pattern, $color;
+            }
+
+            .block {
+                @include add-border;
+            }
+        }
+
+74. BEST way to do this using list-maps: 
+        
+        $add-border (
+            position all,
+            size 1px,
+            pattern solid,
+            color #999
+        ) !default;
+
+        @mixin add-border( $position: map-get($add-border, position), 
+            $size: map-get($add-border, size),  
+            $pattern: map-get($add-border, pattern),  
+            $color: map-get($add-border, color) ) {
+            
+            @if $position == all {
+                border: $position $pattern $color;
+            } @else {
+                border-#{$position}: $size, $pattern, $color;
+            }
+
+            // border
+            .block {
+                @include add-border;
+            }
+
+            // border-left
+            .block {
+                @include add-border($position: left);
+            }
+
+            // border-bottom
+            .block {
+                @include add-border($position: bottom);
+            }
+        }
+
+75. NOTE: If you include a config file that sets default values for SOME of the 
+    properties, the other values will be set to NULL.
+    To fix this, see the example below under the section "Mixin with Null Options and Named Arguments"
+
+        Example: 
+            // config file
+            $add-border: (position right, size 10px);
+
+            $add-border (
+                // position is set to right as defined above
+                position all,
+                // size is set to 10px as defined above
+                size 1px,
+                // pattern is now null
+                pattern solid,
+                // color is now null
+                color #999
+            ) !default;
+
+            @mixin add-border( $position: map-get($add-border, position), 
+                $size: map-get($add-border, size),  
+                $pattern: map-get($add-border, pattern),  
+                $color: map-get($add-border, color) ) {
+                
+                @if $position == all {
+                    border: $position $pattern $color;
+                } @else {
+                    border-#{$position}: $size, $pattern, $color;
+                }
+
+                // border
+                .block {
+                    @include add-border;
+                }
+
+                // border-left
+                .block {
+                    @include add-border($position: left);
+                }
+
+                // border-bottom
+                .block {
+                    @include add-border($position: bottom);
+                }
+            }
+
+Mixin with Null Options and Named Arguments
+
+76. 
+    Example 1: 
+
+        @mixin foo($width: null, $height: null) {
+            width: $width;
+            height: $height;
+            color: orange;
+        }
+
+        .block {
+            // set the width and height to 100%
+            @include foo(100%, 100%);
+            // set the height to 100%
+            // width will not be set
+            @include foo(height: 100%);
+        }
+
+    Example 2 (fixing the problem in #75 above):
+        Example: 
+
+            // config file
+            $add-border: (position right, size 10px);
+
+            $add-border (
+                // position is set to right as defined above
+                position all,
+                // size is set to 10px as defined above
+                size 1px,
+                // pattern is now null
+                pattern solid,
+                // color is now null
+                color #999
+            ) !default;
+
+            @mixin add-border( $position: map-get($add-border, position), 
+                $size: map-get($add-border, size),  
+                $pattern: map-get($add-border, pattern),  
+                $color: map-get($add-border, color) ) {
+                
+                @if $position == all {
+                    border: $position $pattern $color;
+                } @else {
+                    border-#{$position}: $size, $pattern, $color;
+                }
+
+                .block {
+                    // position and size have already been set
+                    // now we need to set the pattern and color
+                    @include add-border($pattern: solid, $color: red);
+                }
+            }
+
+Functions Turned Up to 11:
+
+77. Unlike mixins, functions do not write out any CSS rules, but
+    return a value based on a series of arguments and logical processes.
+
+78. Functions, much like functions in JavaScript,
+    are like little programs that are designed to give you a specific output.
+
+79. Simple Function:
+
+        Example:
+
+            @function percent-to-number($value) {
+                @return $value / 100;
+            }
+
+            @function set-opacity($color) {
+                $lightness: lightness($color);
+                $lightness-number: percent-to-number($lightness);
+                $transparency-value: transparentize($color, $lightness-number);
+                @return $transparency-value;
+            }
+
+            .block {
+                background-color: set-opacity(#ccc);
+            }
+
+Mixins with Too Much Logic?  Build with Functions Instead
+
+80. Example of a @mixin with too much logic:
+
+        @mixin the-grid($count, $context: 12, $width: 60, $gutter: 20) {
+
+            $grid-width: ($count - 1) * gutter * ($count * $width);
+
+            $context-width: $context * ($width + $gutter);
+
+            width: percentage($grid-width / $context-width);
+        }
+
+        .block {
+            @include the-grid(10);
+        }
+
+81. Better way to do this using functions:
+
+        @function grid-width($count, $gutter, $width) {
+            $grid-width: ($count - 1) * gutter * ($count * $width);
+            @return $grid-width;
+        }
+
+        @function context-width($context, $width, $gutter) {
+            $context-width: $context * ($width + $gutter);
+            @return $context-width;
+        }
+
+        @mixin the-grid($count, $context: 12, $width: 60, $gutter: 20) {
+            $grid-width: grid-width($count, $gutter, $width);
+            $context-width: context-width($context, $width, $gutter);
+            width: percentage($grid-width / $context-width);
+        }
+
+        .block {
+            @include the-grid(10);
+        }
+
+Selector Inheritance: Trap Doors and Pitfalls of @extend
+
+82. What if you simply want to repeat rules, without having to duplicate them? 
+    This is where @extend come into play.
+
+83. Simple example of using @extend:
+        h1 {
+            font-size: 16px;
+            font-family: verdana;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 12px;
+        }
+
+        .large-copy {
+            @extend h1;
+        }
+
+84. Selector "Puking":
+        Example:
+            h1 {
+                font-size: 16px;
+                font-family: verdana;
+                text-transform: uppercase;
+            }
+
+            h2 {
+                @extend h1;
+                font-size: 12px;
+            }
+
+            .large-copy {
+                @extend h1;
+            }
+
+            // this will also create a
+            // .foo h2 rule as well
+            // you might not want this 
+            .foo {
+                border: 1px solid red;
+                h1 {
+                    color: white;
+                }
+            }
+
+85. You can fix this by using a placeholder selector.
+
+86. A placeholder selector is much like a regular selector, except
+    it is invisible until it's clled into another selector using
+    the @extend directive.
+
+87.  Example of using a placeholder selector:
+        %base-heading {
+            font-size: 16px;
+            font-family: verdana;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            @extend %base-heading;
+        }
+
+        h2 {
+            @extend %base-heading;
+            font-size: 12px;
+        }
+
+        .large-copy {
+            @extend %base-heading;
+        }
+
+        .foo {
+            border: 1px solid red;
+            h1 {
+                color: white;
+            }
+        }
+
+Placeholders Appear Where Written:
+
+88. Placeholders work exactly like regular selectors, it's just that the original name 
+    given does not appear in the CSS.
+
+89. Example of a @extend "Trap Door":
+        // %placeholder will not be used because
+        // it is defined after .foo was defined
+        .foo {
+            @extend %placeholder;
+            attribute: value;
+        }
+
+        .bar {
+            attribute: value;
+        }
+
+        %placeholder {
+            display: none;
+        }
+
+        .block {
+            attribute: value;
+        }
+
+        .baz {
+            @extend %placeholder;
+            color: orange;
+        }
+
+90. Example of a @extend "Pitfall":
+        %foo {
+            color: orange;
+            %bar {
+                color: blue;
+                %baz {
+                    color: red;
+                }
+            }
+        }
+
+        .block {
+            @extend %foo;
+            .brick {
+                @extend %bar;
+                .board {
+                    @extend %baz;
+                }
+            }
+        }
+
+        // this will create some serious CSS "Puking"
+        .car {
+            @extend %foo;
+            .van {
+                @extend %baz;
+            }
+        }
+
+91.  To fix this:
+        %foo {
+            color: orange;
+        }
+            
+        %bar {
+            color: blue;
+        }
+
+        %baz {
+            color: red;
+        }
+
+        .block {
+            @extend %foo;
+            .brick {
+                @extend %bar;
+                .board {
+                    @extend %baz;
+                }
+            }
+        }
+
+        // this will create some serious CSS "Puking"
+        .car {
+            @extend %foo;
+            .van {
+                @extend %baz;
+            }
+        }
+
+Extends and LibSass:
+
+92. Using @extend and LibSass means lots of testing.
+
+93. We could get some serious CSS "Puking" if we aren't careful.
+
+94. Example:
+        %foo 
+            color: orange;
+        
+        %bar 
+            color: blue;
+
+        %baz 
+            color: red;
+            &:hover
+                color: yellow
+            %bozo
+                nose:red
+                &:hover
+                    hair: blue
+
+            .block 
+                @extend %foo
+                .brick 
+                    @extend %bar
+                    .board 
+                        @extend %baz
+                        // this will create some serious CSS "Puking"
+                        .clown 
+                            @extend %bozo
+
+            .car 
+                @extend %foo
+                .van 
+                    @extend %baz
+
+95. We fix this by making the @extends "shallow" again:
+        %foo 
+            color: orange;
+        
+        %bar 
+            color: blue;
+
+        %baz 
+            color: red;
+            &:hover
+                color: yellow
+        %bozo
+            nose:red
+            &:hover
+                hair: blue
+
+            .block 
+                @extend %foo
+                .brick 
+                    @extend %bar
+                    .board 
+                        @extend %baz
+                        .clown 
+                            @extend %bozo
+
+            .car 
+                @extend %foo
+                .van 
+                    @extend %baz
+
+96. RULES TO KEEP YOU SAFE:
+        1. Avoid extending base elements
+        2. Use placeholders as much as you can
+        3. Keep the nesting of selectors to two levels or less
+
+
+&-suffix Naming Conventions
+
+97. The addition of the '&'' to reference parent selectors makes using nested selectors 
+    for creating the child and sibling selectors even more powerful.
+
+98. Simple Example of using &:
+    
+    .box {
+        color: orange;
+        &:hover {
+            color: red;
+        }
+    }
+
+    .box-selected {
+        color: orange;
+        // will apply to elements that have both the .box-selected
+        // and .is-selected classes
+        &.is-selected {
+            color: red;
+        }
+    }
+
+    .box-selected-again {
+        color: orange;
+        // this will change .is-selected to a nested child selector
+        & .is-selected {
+            color: red;
+        }
+    }
+
+99. Modernizr example:
+    .box {
+        color: orange;
+        // this will flip the order of the selectors
+        // it will now be .no-touch .box
+        .no-touch & {
+            color: red;
+        }
+    }
+
+New & Powers
+
+100. Example:
+        %default {
+            &-input {
+                border: 1px solid #ccc;
+                background-color: transparentize(white, 0.5);
+            }
+        }
+
+        .header {
+            background-color: black;
+            &-search {
+                font-size: 1.3em;
+                &__input {  
+                    @extend %default-input;
+                    &:hover, &--selected, &.is-selected {
+                        @extend %default-input;
+                    }
+                }
+            }
+        }
+
+Advanced Color Functions:
+
+101. You can create an entire site using a basic color palette.
+
+102. Example:
+
+        //core values
+        $font-size: 16;
+        $primary: #3277b3;
+        $success: #4cb332;
+        $warning: #e48901;
+        $alert: #c13e24;
+
+        // function for creating em values from px values
+        @function em($target, $context: $font-size) {
+            @return ($target / $context) * 1em;
+        }
+
+        // !default values
+        $button-color: $primary !default;
+        $button-text-color: white !default;
+        $button-line-height: 32 !default;
+        $button-radius: 3 !default;
+        $button-padding: 30 !default;
+        $button-font-size: 24 !default;
+        $button-weight: bold !default;
+
+        // the mixin
+        @mixin default-button ($color: $button-text-color,
+            $line-height: $button-line-height,
+            $radius: $button-radius,
+            $padding: $button-padding,
+            $font-size: $button-font-size,
+            $weight: $button-weight) {
+
+            color: $color;
+            line-height: em($line-height);
+            border-radius: em($radius);
+            padding: 0 em($padding);
+            font-size: em($font-size);
+            font-weight: $weight;
+        }
+        
+        // another mixin that includes the @mixin default-button
+        @mixin flat-button($color: $button-color) {
+            @include default-button;
+            background-color: $color;
+        }  
+
+        // selector
+        .primary {
+            @include flat-button;
+        }
+
+More Advanced Color Functions:
+
+103. Darken function for shadow and highlight colors:
+        
+        //core values
+        $font-size: 16;
+        $primary: #3277b3;
+        $success: #4cb332;
+        $warning: #e48901;
+        $alert: #c13e24;
+
+        // function for creating em values from px values
+        @function em($target, $context: $font-size) {
+            @return ($target / $context) * 1em;
+        }
+
+        // !default values
+        $button-color: $primary !default;
+        $button-text-color: white !default;
+        $button-line-height: 32 !default;
+        $button-radius: 3 !default;
+        $button-padding: 30 !default;
+        $button-font-size: 24 !default;
+        $button-weight: bold !default;
+
+        // the mixin
+        @mixin default-button ($color: $button-text-color,
+            $line-height: $button-line-height,
+            $radius: $button-radius,
+            $padding: $button-padding,
+            $font-size: $button-font-size,
+            $weight: $button-weight) {
+
+            color: $color;
+            line-height: em($line-height);
+            border-radius: em($radius);
+            padding: 0 em($padding);
+            font-size: em($font-size);
+            font-weight: $weight;
+        }
+
+        @mixin flat-button($color: $button-color) {
+            @include default-button;
+            $highlight-color: lighten($color, 50%);
+            $shadow-color: grayscale(transparentize($color, 0.1));
+
+            background-color: $color;
+            border: 1px solid darken($color, 10%);
+            text-shadow: 0px 1px 1px darken($color, 20%);
+            box-shadow: 0 em(2) em(6) 0 $shadow-color;
+            &:hover {
+                background-color: darken($color, 5%);
+            }
+        }  
+
+        .primary {
+            @include flat-button($success);
+        }
+
+Refactoring to Make It Better:
+
+104. Make it even better with code refactoring (adjust_hue, saturate, @extends, etc):
+
+        //core values
+        $font-size: 16;
+        $primary: blue;
+        $success: adjust_hue($primary, 260);
+        $warning: saturate(adjust_hue($primary, 188), 43);
+        $alert: lighten(saturate(adjust_hue($primary, 162), 12), 1);
+
+        // function for creating em values from px values
+        @function em($target, $context: $font-size) {
+            @return ($target / $context) * 1em;
+        }
+
+        // !default values
+        $button-color: $primary !default;
+        $button-text-color: white !default;
+        $button-line-height: 32 !default;
+        $button-radius: 3 !default;
+        $button-padding: 30 !default;
+        $button-font-size: 24 !default;
+        $button-weight: bold !default;
+
+        // the mixin
+        @mixin default-button ($color: $button-text-color,
+            $line-height: $button-line-height,
+            $radius: $button-radius,
+            $padding: $button-padding,
+            $font-size: $button-font-size,
+            $weight: $button-weight) {
+
+            color: $color;
+            line-height: em($line-height);
+            border-radius: em($radius);
+            padding: 0 em($padding);
+            font-size: em($font-size);
+            font-weight: $weight;
+        }
+
+        @mixin flat-button($color: $button-color) {
+            $highlight-color: lighten($color, 50%);
+            $shadow-color: grayscale(transparentize($color, 0.1));
+
+            background-color: $color;
+            border: 1px solid darken($color, 10%);
+            text-shadow: 0px 1px 1px darken($color, 20%);
+            box-shadow: 0 em(2) em(6) 0 $shadow-color;
+            &:hover {
+                background-color: darken($color, 5%);
+            }
+        }  
+
+        // placeholder selector
+        %default-button {
+            @include default-button;
+        }
+
+        // selectors
+        .primary {
+            @extend %default-button;
+            @include flat-button($primary);
+        }
+
+        .success {
+            @extend %default-button;
+            @include flat-button($success);
+        }
+
+        .warning {
+            @extend %default-button;
+            @include flat-button($warning);
+        }
+
+        .alert {
+            @extend %default-button;
+            @include flat-button($alert);
+        }
+
+Playing Around with Str-Length:
+
+105. Example:
+        // create a variable that contains several strings
+        $list: 'this is a string of words', 'more words', 'and even more words';
+
+        // get the length of a string using str-length
+        .block {
+            $strings: length($list);
+            foo: $strings;
+            $random: random($strings);
+            foo: $random;
+            $string-length: str-length(nth($list, $random));
+            foo: $string-length;
+
+            border: 1px solid;
+            padding: 0.5em;
+            text-align: center;
+            width: $string-length * 0.8em;
+            &:after {
+                font-size: 18px;
+                content: nth($list, $random);
+            }
+        }
+
+Random Strings:
+
+106. Uppercase/Lowercase functions:
+        // create a variable that contains several strings
+        $list: 'this is a string of words', 'more words', 'and even more words';
+
+        // get the length of a string using str-length
+        .block {
+            $strings: length($list);
+            foo: $strings;
+            $random: random($strings);
+            foo: $random;
+            $string-length: str-length(nth($list, $random));
+            foo: $string-length;
+
+            border: 1px solid;
+            padding: 0.5em;
+            text-align: center;
+            width: $string-length * 0.8em;
+            &:after {
+                font-size: 18px;
+                content: to-upper-case(nth($list, $random));
+            }
+        }
+
+107. Insert new string:
+        Example 1:
+        // create a variable that contains several strings
+        $list: 'this is a string of words', 'more words', 'and even more words';
+
+        // get the length of a string using str-length
+        .block {
+            $strings: length($list);
+            foo: $strings;
+            $random: random($strings);
+            foo: $random;
+            $string-length: str-length(nth($list, $random));
+            foo: $string-length;
+
+            border: 1px solid;
+            padding: 0.5em;
+            text-align: center;
+            width: $string-length * 0.8em;
+            &:after {
+                $build-a-string: to-upper-case(str-insert(nth($list, $random), ' foo ', random($string-length)));
+                font-size: 18px;
+                content: $build-a-string;
+            }
+        }
+
+        Example 2:
+        // create a string variable $words
+        $words: 'this is the first string';
+
+        // insert the word 'not' after 'this is ' in the $words variable
+        .block {
+          content: str-insert($words, ' not', 8);
+        }
+
+        // this will output the string 'this is not the first string'
+
+The String Index Function:
+
+108. Use the str-index function:
+        // create a variable that contains several strings
+        $list: 'this is a string of words', 'more words', 'and even more words', 'alert - boom';
+
+        // get the length of a string using str-length
+        .block {
+            $strings: length($list);
+            foo: $strings;
+            $random: random($strings);
+            foo: $random;
+            $string-length: str-length(nth($list, $random));
+            foo: $string-length;
+
+            border: 1px solid;
+            padding: 0.5em;
+            text-align: center;
+            width: $string-length * 0.8em;
+            &:after {
+                $build-a-string: to-upper-case(str-insert(nth($list, $random), ' foo ', random($string-length)));
+                $str-index: str-index($build-a-string, 'ALERT');
+                @if $str-index != null {
+                    color: red;
+                }
+                font-size: 18px;
+                content: $build-a-string;
+            }
+        }
+
+Using Random Functions in your Designs:
+
+109. CREATE A FUNCTION THAT WILL GENERATE A RANDOM COLOR!!!
+    
+        // create a selector
+        .random-color {
+            width: 200px;
+            height: 200px;
+            $number: random(10 * 0.1);
+            background-color: rgba(random(255), random(255), random(255), $number);
+        }
+
+110. We can do this (#109) better by using a function:
+
+        // create a function
+        @function random-decimal($value) {
+            $decimal: random(10 * 0.1);
+            @return $decimal;
+        }
+
+        // create a selector
+        .random-color {
+            width: 200px;
+            height: 200px;
+            $number: random(10 * 0.1);
+            background-color: rgba(random(255), random(255), random(255), random-decimal(10));
+        }
+
+111. We can do it (#110) even better by using a mixin:
+    
+        // create a function
+        @function random-decimal($value) {
+            $decimal: random(10 * 0.1);
+            @return $decimal;
+        }
+
+        // create a mixin
+        @mixin random-rgba($attr, $color: 255, $alpha: 10) {
+            #{$attr}: rgba(random($color), random($color), random($color), random-decimal($alpha));
+        }
+
+        // create a selector
+        .random-color {
+            width: 200px;
+            height: 200px;
+            @include random-rgba(border);
+        }
+
+Randomly Generating Graphics:
+
+112. TO USE THIS NEXT CODE, YOU WILL HAVE TO USE HAML!!!
+     This code will generate a random background-color for 30 <div>s 
+     each with a random height assigned:
+     TO USE THIS NEXT CODE, YOU WILL HAVE TO USE HAML!!!
+
+    1. HAML CODE:
+        -(1..30).each do |i|
+            .bar
+
+    2. Sass Code:
+        // create a function
+        @function random-decimal($value) {
+            $decimal: random(10 * 0.1);
+            @return $decimal;
+        }
+
+        // create a mixin
+        @mixin random-rgba($attr, $color: 255, $alpha: 10) {
+            #{$attr}: rgba(random($color), random($color), random($color), random-decimal($alpha));
+        }
+
+        // create the .bar selector
+        .bar {
+            width: 30px;
+            display: inline-block;
+        }
+
+        @for $i from 1 through 30 {
+            .bar {
+                &:nth-child(#{$i}) {
+                    height: random(300) + px;
+                    @include random-rgba(background-color);
+                }
+            }
+        }
+
+Introspection:
+
+113. Introspection: "Introspection is the examination of one's own
+     conscious thoughts and feelings"
+
+114. With Sass We Can Test For:
+        1. If a variable exists
+        2. If a global variable exists
+        3. If a function exists
+        4. If a mixin exists
+
+115. With Sass We Can Inspect:
+        1. Inspect for value type
+        2. Inspect for the unit(s) of a number
+        3. Inspect if units can be operated on
+
+116. Example 1 (see if a variable exists using the variable-exists function):
+
+        $color: green;
+        .block {
+            // $color: green;
+            @if variable-exists(color) {
+                color: $color;
+            } @else {
+                color: red;
+            }
+        }
+
+117. Example 2 (see if a global variable exists using the global-variable-exists function):
+
+        // $color: green;
+        .block {
+            // $color: green;
+            $color: green !global;
+            @if global-variable-exists(color) {
+                color: $color;
+            } @else {
+                color: red;
+            }
+        }
+
+118. Example 3 (use the existence of a variable to determine what to do):
+
+        .block {
+            @if global-variable-exists(color) {
+                color: $color;
+            } @else {
+                color: inheirit;
+            }
+        }
+
+More Introspection:
+
+119. Example 1 (check if a function exists using function-exists):
+        
+        // create a function
+       // @function random-decimal($value) {
+           // $decimal: random(10 * 0.1);
+            // @return $decimal;
+        // }
+
+        // create a mixin
+        @mixin random-rgba($attr, $color: 255, $alpha: 10) {
+            @if function-exists(random-decimal) {
+                #{$attr}: rgba(random($color), random($color), random($color), random-decimal($alpha));
+            } @else {
+                &:before {
+                    content: "Custom function 'random-decimal' is not found. Please check your code";
+                } 
+            }
+        }
+
+        .block {
+            @include random-rgba(color);
+            border: 2px solid red;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            padding:10px;
+        }
+
+120. Example 2 (check if a mixin exists using mixin-exists):
+        
+        // create a function
+        @function random-decimal($value) {
+            $decimal: random(10 * 0.1);
+            @return $decimal;
+        }
+
+        // create a mixin
+        //@mixin foo() {
+            //foo: bar;
+        //}
+
+        // create a mixin
+        @mixin random-rgba($attr, $color: 255, $alpha: 10) {
+            @if function-exists(random-decimal) {
+                #{$attr}: rgba(random($color), random($color), random($color), random-decimal($alpha));
+                @if mixin-exists(foo) {
+                    @include foo;
+                } @else {
+                    &:before {
+                        color: black;
+                        content: "Custom mixin 'foo' is not found. Please check your code";
+                    }
+                }
+            } @else {
+                &:before {
+                    content: "Custom function 'random-decimal' is not found. Please check your code";
+                } 
+            }
+        }
+
+        .block {
+            @include random-rgba(color);
+            border: 2px solid red;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            padding:10px;
+        }
+
+Evalutating Strings:
+
+121. Example 1 (check if a variable contains an int, string or color using the type-of function):
+    
+        // create some variables
+        $number: 10;
+        $string: word;
+        $color: red;
+
+        // create some selectors
+        .block-number {
+            @if type-of($number) == number {
+                &:before {
+                    content: "#{$number} is a #{type-of($number)}";
+                }
+            } @else if type-of($number) == string {
+                &:before {
+                    content: "#{$number} is a #{type-of($number)}";
+                }
+            } @else if type-of($number) == color {
+                &:before {
+                    content: "#{$number} is a #{type-of($number)}";
+                }
+            }
+        }
+
+        .block-string {
+            @if type-of($string) == number {
+                &:before {
+                    content: "#{$string} is a #{type-of($string)}";
+                }
+            } @else if type-of($string) == string {
+                &:before {
+                    content: "#{$string} is a #{type-of($string)}";
+                }
+            } @else if type-of($string) == color {
+                &:before {
+                    content: "#{$string} is a #{type-of($string)}";
+                }
+            }
+        }
+
+        .block-color {
+            @if type-of($color) == number {
+                &:before {
+                    content: "#{$color} is a #{type-of($color)}";
+                }
+            } @else if type-of($color) == string {
+                &:before {
+                    content: "#{$color} is a #{type-of($color)}";
+                }
+            } @else if type-of($color) == color {
+                &:before {
+                    content: "#{$color} is a #{type-of($color)}";
+                }
+            }
+        }
+
+122. Example 2 (build out all the colors for a border independantly):
+
+        // create some variables
+        $arg: red;
+        $pixels: 10px;
+        $percents: 10%;
+        $inches: 10in;
+
+        .block {
+            @if type-of($arg) != string {
+                $arg-to-string: inspect($arg);
+                border-color: $arg-to-string + ' ' + adjust_hue($arg, 10deg) + ' ' + adjust_hue($arg, 90deg) + ' ' + adjust_hue($arg, 180deg);
+            } @else {
+                you: lose;
+            }
+            width: 200px;
+            height: 200px;
+            border-size: 2px;
+            border-style: solid;
+        }
+
+123. Example 3 (see if two variables are comparable):
+    
+    $ems: 2em;
+    $pixels: 5px;
+    $percents: 25%;
+    $inches: 1in;
+
+    @function add-if-comparable($alpha, $bravo) {
+        @if comparable($alpha, $bravo) {
+            @return $alpha + $bravo;
+        } @else {
+            @return 'error';
+        }
+    }
+
+    .block {
+        display: block;
+        background-color: orange;
+        font-size: add-if-comparable($ems, $ems);
+        content: add-if-comparable($pixels, $percents);
+    }
+
+Using the @each Directive
+
+124. Simple Example of the @each Directive:
+        
+        $icon-names: (strategy '\e002') (twitter '\e003') (github '\e004');
+
+        @each $icon-name in $icon-names {
+            .icon-#{nth($icon-name, 1)}:after {
+                content: nth($icon-name, 2);
+            }
+        }
+The List-Maps Feature
+
+125. Create a placeholder selector:
+
+    $icon-names: (strategy '\e002') (twitter '\e003') (github '\e004') (treehouse '\006');
+
+    %ico-font-base {
+        font-family: "ico-fonts";
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        text-transform: none;
+
+        // Better Font Rendering
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    @each $icon-name in $icon-names {
+        .icon-#{nth($icon-name, 1)}:after {
+            @extend %ico-font-base;
+            content: nth($icon-name, 2);
+        }
+    }
+
+
+126. Better way of doing this with the @each function:
+
+    $icon-names: (strategy '\e002') (twitter '\e003') (github '\e004') (treehouse '\006');
+
+    %ico-font-base {
+        font-family: "ico-fonts";
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        text-transform: none;
+
+        // Better Font Rendering
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    @each $name, $pua in $icon-names {
+        .icon-#{$name}:after {
+            @extend %ico-font-base;
+            content: $pua;
+        }
+    }
+
+    More on @for Loops:
+
+    127.  Create a series of selectors that will evenly space out the elements within:
+            // Bad way of doing this
+            .span-1 {
+                width: 25%;
+            }
+
+            .span-2 {
+                width: 50%;
+            }
+
+            .span-3 {
+                width: 75%;
+            }
+
+            .span-4 {
+                width: 100%;
+            }
+
+128. Better way is to use a @mixin:
+        We can use numbers (span-1, span-2, span-3, etc):
+            // Better way, use a mixin
+            @mixin spans($columns) {
+
+                // count the number of items in an array  using the length function
+                $col-val: length($columns);
+
+                // create a @for loop
+                @for $i from 1 through $col-val {
+
+                    // create the CSS rules for the span selectors (span-1, span-2, etc)
+                    .span-#{nth($columns, $i)} {
+                        // calculate the width value (i.e 25%, 50%, etc)
+                        width: percentage((1 / $col-val) * $i);  
+                    }
+                }
+            }
+
+            @include spans(1 2 3 4);
+
+ 129. We can also use strings (span-one, span-two, span-three, etc):
+            
+            @mixin spans($columns) {
+
+                // count the number of items in an array  using the length function
+                $col-val: length($columns);
+
+                // create a @for loop
+                @for $i from 1 through $col-val {
+
+                    // create the CSS rules for the span selectors (span-one, span-two, etc)
+                    .span-#{nth($columns, $i)} {
+                        // calculate the width value (i.e 25%, 50%, etc)
+                        width: percentage((1 / $col-val) * $i);  
+                    }
+                }
+            }
+
+            @include spans(one two three four);
+
+130.  We can also use the @for option "to" to loop up to a certain value:
+         In the following example, we will get one two three instead of one two three four:
+
+            @mixin spans($columns) {
+
+                // count the number of items in an array  using the length function
+                $col-val: length($columns);
+
+                // create a @for loop
+                @for $i from 1 to $col-val {
+
+                    // create the CSS rules for the span selectors (span-one, span-two, etc)
+                    .span-#{nth($columns, $i)} {
+                        // calculate the width value (i.e 25%, 50%, etc)
+                        width: percentage((1 / $col-val) * $i);  
+                    }
+                }
+            }
+
+            @include spans(one two three four);
+
+131. We can also loop thru a group of values in reverse:
+    
+            @mixin spans($columns) {
+
+                // count the number of items in an array  using the length function
+                $col-val: length($columns);
+
+                // create a @for loop (go in reverse)
+                @for $i from $col-val through 1 {
+
+                    // create the CSS rules for the span selectors (span-one, span-two, etc)
+                    .span-#{nth($columns, $i)} {
+                        // calculate the width value (i.e 25%, 50%, etc)
+                        width: percentage((1 / $col-val) * $i);  
+                    }
+                }
+            }
+
+            @include spans(one two three four);
+
+The @content Directive:
+
+132. The @content directive allows you to inject CSS rules into the space of
+         a mixin at its point of inclusion.
+
+133. Example (BAD way):
+            
+            @mixin foo($display) {
+                color: red;
+                display: $display;
+            }
+
+            .block {
+                @include foo(block);
+                color: blue;
+            }
+
+134. Example (GOOD way using @content directive):
+        Create a nested child:
+
+            @mixin foo($display, $selector) {
+                color: red;
+                display: $display;
+                & #{$selector} {
+                    @content;
+                }
+            }
+
+            .block {
+                @include foo(block, '.foo'){
+                    color: orange;
+                }
+            }
+
+Another Example of the @content Rule:
+
+135.  A @mixin can almost be like an object in Object-Oriented-Programming (OOP)
+
+136. Example using the desired class:
+
+                @mixin van ($selector) {
+                    color: black;
+                    windows: tinted;
+                    license: Washington;
+
+                    @if $selector == '.seats' {
+                        & #{$selector} {
+                            seats: 6;
+                            color: red;
+                            @content;
+                        }
+                    } @else {
+                        & #{$selector} {
+                            @content;
+                        }
+                    }
+                }
+
+                .my-van {
+                    @include van('.seats') {
+                        heated: false;
+                        fabric: cloth;
+                        electric: true;
+                    };
+                }
+
+136. Example NOT using the desired class:
+            
+            @mixin van ($selector) {
+                    color: black;
+                    windows: tinted;
+                    license: Washington;
+
+                    @if $selector == '.seats' {
+                        & #{$selector} {
+                            seats: 6;
+                            color: red;
+                            @content;
+                        }
+                    } @else {
+                        & #{$selector} {
+                            @content;
+                        }
+                    }
+                }
+
+                .my-van {
+                    @include van('.coat') {
+                        heated: false;
+                        fabric: cloth;
+                        electric: true;
+                    };
+                    dents: 2;
+                }
+
+Defining Breakpoints with @content:
+
+137.  The most popular use of @content is in defining breakpoints:
+
+138. Example (one way of doing it WITHOUT using the @content directive):
+
+            $font-size: 12;
+
+            @function em($target, $context: $font-size) {
+                @return ($target / $context) * 1em;
+            }
+
+            $break-small: em(320);
+            $break-large: em(1200);
+
+            .profile-pic {
+                float: left;
+                width: em(250);
+                @media screen and (max-width: $break-small) {
+                    width: em(100);
+                    float: none;
+                }
+                @media screen and (min-width: $break-large) {
+                    float: right;
+                }
+            }
+
+139. Example (Better way of doing it using the @content directive):
+        
+            $font-size: 12;
+
+            @function em($target, $context: $font-size) {
+                @return ($target / $context) * 1em;
+            }
+
+            $break-small: em(320);
+            $break-large: em(1200);
+
+            @mixin respond-to($media) {
+                @if $media == handhelds {
+                    @media only screen and (max-width: $break-small) { @content; } 
+                }
+                @else if $media == medium-screens {
+                    @media only screen and (min-width: $break-small + 1) and  (max-width: $break-large -1) { @content; }
+                }
+                @else if $media == wide-screens {
+                    @media only screen and (min-width: $break-large) { @content; }
+                }
+            }
+
+            .profile-pic {
+                float: left;
+                width: em(250);
+                @include respond-to(handhelds) {
+                    width: em(100);
+                    float: none;
+                }
+                @include respond-to(medium-screens) {
+                    width: em(125);
+                }
+                @include respond-to(wide-screens) {
+                    float: right;
+                }
+            }
+
+The @root Directive
+
+140. The @root directive allows us to nest a series of rules within a module, but the CSS output 
+        will be at the root level of the document.
+
+141. Simple Example:
+            
+            .block {
+                color: orange;
+                font-size: 2em;
+                @at-root {
+                    img {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+
+142. Better Example:
+
+                .color-sway {
+                    width: 100px;
+                    height: 100px;
+                    background-color: red;
+                    &:hover {
+                        animation: color-sway 5s;
+                    }
+                }
+                @at-root {
+                    @keyframes color-sway {
+                        from { background-color: red; }
+                        to { background-color: blue; }
+                    }
+                }
+
+More About the @root Directive
+
+143.  More Powerful Example:
+            
+            .foo {
+                @media (min-width: 400px) {
+                    display: flex;
+                    @at-root (without: media) {
+                        display: inline-block;
+                    }
+                }
+            }
+
+144.  Another Example:
+            
+            .foo {
+                @media (min-width: 400px) {
+                    display: flex;
+                    @at-root  {
+                        .bar {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+145.  Another Example:
+            
+            .foo {
+                @media (min-width: 400px) {
+                    display: flex;
+                    @at-root (without: rule media) {
+                        .bar {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+146.  Another Example (the & represents .foo):
+            
+            .foo {
+                @media (min-width: 400px) {
+                    display: flex;
+                    &) {
+                        .bar {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+147.  Another Example:
+            
+            .foo {
+                @media (min-width: 400px) {
+                    display: flex;
+                    @at-root (without: media) {
+                        &-element {
+                            display: inline-block;
+                            &__modifier {
+                                color: orange;
+                            }
+                        }
+                    }
+                }
+            }
+
+148.  Another Example (with: rule so we will get .foo .bar):
+            
+            .foo {
+                @media (min-width: 400px) {
+                    display: flex;
+                    @at-root (with: rule) {
+                        .bar {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+149.  Another Example (with: rule so we will get .foo .bar inside the @media):
+            
+            .foo {
+                @media (min-width: 400px) {
+                    display: flex;
+                    @at-root (with: rule media) {
+                        .bar {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+

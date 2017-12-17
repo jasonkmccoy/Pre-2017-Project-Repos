@@ -1,0 +1,335 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0b1 | 201101 
+   Reset
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	outline: 0px;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Basics */
+html, input, select, textarea { 
+    color: #252525; 
+    font-family: "Open Sans Condensed", sans-serif;
+	font-size:13px; 
+}
+body {
+    background:#dee0e0;
+    font:13px/1.4 Arial,Helvetica,sans-serif;   
+}
+p {
+	margin:0 0 1em 0;
+}
+strong {
+	font-weight: 700;
+}
+img {
+	height: auto;
+}
+
+h1 {
+	color:#00588a;
+	font-weight:400;
+    font-size: 22px;
+    padding:0;
+    margin:0 0 0.9em 0;
+}
+h2 {
+	font-family: "Open Sans Condensed", sans-serif;
+	font-weight:600;
+	color:#00588a;
+	border-bottom:1px solid #e4e5e7;
+    font-size: 22px;
+    padding:0px 0px 14px 0px;
+    margin:1.5em 0 .6em 0;
+}
+a:link {
+	color: #4479d3;
+	text-decoration: none;
+}
+a:hover {
+	color: #4479d3;
+}
+a:visited {
+	color: #4479d3;
+}
+/* Layout */
+.wrapper {
+    margin:0 auto;
+}
+#header {
+	width: 100%;
+	background: #ffffff;
+}
+#logo {
+	max-width: 1000px;
+	margin:0px auto;
+	text-align: left;
+}
+#title-bar {
+	background: url("http://www.highroadsolution.com/clients/aga/epc2014/images/header-bg.jpg");
+	width: 100%;
+	height: 76px;
+}
+#heading {
+	max-width: 1000px;
+    margin:0px auto;
+}
+#heading div {
+	width: 100%;
+	margin: 0px 10px;
+	padding: 18px 0px 0px 37px;
+}
+#heading h1 {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+	color:#ffffff;
+}
+#email {
+	padding: 30px 36px;
+}
+#content {
+    max-width: 1000px;
+    margin:0px auto;
+}
+.content-main { 
+	min-height:200px;
+    padding:0px 33px 19px 33px;
+}
+.content-main td {
+	padding: 0px 15px 10px 0px;
+	font-weight: 700;
+}
+.content {
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	line-height: 100%;
+	border:5px solid #d8d9d9;
+	border-radius: 5px;
+    background-color:#fff;
+    margin:24px 10px;
+}
+.inner-content {
+    padding:32px 33px 19px 33px;
+}
+.col1 {
+	float:left;
+	width:45%;
+}
+.col2 {
+	float:right;
+	width:45%;
+}
+.clearfix {
+	overflow: auto;
+}
+.clear {
+	clear: both;
+	visibility: hidden;
+}
+#unsubscribe {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	padding-top: 0px;
+}
+#confirm {
+	background: #f0f2f3;
+	padding:17px 33px 19px 33px;
+}
+/* Footer */
+#footer {
+	display: block;
+	width: 100%;
+	font-family: "Open Sans Condensed", sans-serif;
+}
+.footer {
+	font-weight: 300;
+	color:#cccace;
+    max-width: 1000px;
+    margin:0px auto;
+}
+.inner-footer {
+	margin: 0px 15px;
+}
+.inner-footer img {
+	vertical-align: top;
+}
+#footer-top {
+	display: block;
+	color:#cccace;
+	width: 100%;
+	background: #2c292e;
+	border-top: 1px solid #c6c8c8;
+    padding: 46px 0px 54px 0px;
+}
+#logo-small {
+	float: left;
+}
+#contact {
+	float: left;
+	padding-left: 20px;
+}
+#contact img {
+	padding-right: 10px;
+}
+#phone {
+	display: block;
+	font-size: 22px;
+	padding-top: 5px;
+}
+#address {
+	display: block;
+	width: 100%;
+	font-size: 18px;
+	padding-top: 15px;
+}
+#phone div {
+	padding: 0px 0px 0px 10px;
+}
+#address div {
+	padding: 5px 0px 0px 10px;
+}
+#footer-bottom {
+	width: 100%;
+	background: #1e1c20;
+	padding: 12px 0px 44px 0px;
+}
+#copyright {
+	width: 45%;
+	color: #4a464d;
+	text-align: right;
+}
+/* Specifics */
+.error {
+    color: #e31b23;
+	margin-left:105px;
+	padding-top: 8px;
+}
+.note {
+    color: #6a737b;
+    line-height: 120%;
+    font-weight: 100;
+	padding-top: 10px;
+    margin-bottom: 0px;
+}
+.disabled {
+	color: #e1e1e1;
+}
+label {
+	font-family: "Roboto", sans-serif;
+}
+label.emailaddy {
+	width: 101px;
+}
+
+/* Buttons/Forms */
+input[type="text"], input[type="email"] {
+	min-width:150px;
+	margin:0px 0px 5px 0px;
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow:    inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow:         inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+	border:1px solid #cfcfcf;
+	padding:4px 6px;
+	font-size:13px;
+
+}
+input[type="text"]:focus, input[type="email"]:focus {
+	border: 1px solid #999;
+}
+input[type="submit"] {
+	color: #fff;
+	padding: 11px 18px;
+	font-size: 12px;
+	cursor: pointer;
+	border: none;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+#email-button {
+	padding-top: 10px;
+}
+.button {
+	background: #ee991c;
+	border-radius: 25px;
+	-webkit-appearance: none;
+}
+.button_red {
+	background: #ea5840;
+}
+.button:hover {
+	background: #ee991c;
+}
+#cmdOptOut {
+	margin-top: 10px;
+}
+/* Media Queries  */
+@media (max-width: 560px) {
+	#heading div { width: 80%; }
+	#heading h1 { font-size: 26px; }
+	.inner-content { padding: 27px 20px; }
+	label { line-height: 140%; }
+	label.emailaddy { padding-bottom: 5px; }
+	.error { margin-left: 0px; }
+	.note { margin-left: 0; padding-top: 0px; }
+	h2 { line-height: 140%; margin-top: 1em; }
+	#logo { margin:0px 0px 0px 0px; padding-left: 0px; }
+	#footer-top { padding-bottom: 30px; }
+	#contact { width: 80%; padding: 10px 0px 0px 5px; }
+	#phone div { padding-left: 0px; }
+	#address div { padding-left: 0px; }
+	.col1, .col2 { float:none; width:100%; }
+	#copyright { text-align: left; padding-top: 5px; }
+	#contact-icons { display: none; }
+}
+@media (max-width: 401px) {
+	#heading div { padding: 0px 0px 0px 37px; }
+}

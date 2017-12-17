@@ -1,0 +1,27 @@
+/* ===================================================
+CSS Basics Tutorial Custom Styles
+   =================================================== */
+
+h2 {
+	color:  rgb(0, 232, 15);
+}
+
+body {
+	background-color: rgb(97, 250, 255);
+}
+
+p {
+	color: rgb(191, 0, 255);
+}
+
+#rabbits-song {
+	background-color: yellow;
+}
+
+#rabbits-info-heading {
+	background-color: purple;
+}
+
+.song-lyrics {
+	background-color: yellow;
+}

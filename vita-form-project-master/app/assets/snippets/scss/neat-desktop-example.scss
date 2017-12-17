@@ -1,0 +1,55 @@
+h1 {
+    margin: 40px auto;
+    text-align: center;
+}
+div.container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 3em;
+    line-height: 2.427em;
+}
+div.container div#filter-name-input,
+div.container div#save-clear-buttons {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%;
+    height: auto;
+    text-align: center
+}
+div.container div#filter-name-sidebar {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 2.35765%;
+    height: auto;
+    text-align: center
+}
+div.container div#filters-name-input:last-child,
+div.container div#filters-name-sidebar:last-child,
+div.container div#select-column-text:last-child,
+div.container div#column-name-input:last-child,
+div.container div#select-operation-text:last-child,
+div.container div#save-clear-buttons:last-child {
+    margin-right: 0;
+}
+input[type="text"] {
+    padding: 0 10px 0 10px;
+    height: 25px;
+    border: 1px solid #999;
+}
+div.container div#select-column-text,
+div.container div#column-name,
+div.container div#select-operation-text {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 2.35765%;
+    height: auto;
+    text-align: center
+}

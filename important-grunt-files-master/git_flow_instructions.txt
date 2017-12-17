@@ -1,0 +1,21 @@
+
+
+1. Inside of repository you are working on, create a new branch called integration
+    git branch integration
+
+2. Initialize the git-flow features:
+    git flow init
+
+3. Follow the prompts to setup git flow options.
+
+4. Start a working on a new feature:
+    git flow feature start feature_name 
+
+5. When you are finished working on this new feature:
+    git flow feature finish feature_name
+
+6. Quick fix branch:
+    git flow hotfix start oh_no_not_a_bug
+
+7. When finished with the hotfix:
+    git flow hotfix finish oh_no_not_a_bug

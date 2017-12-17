@@ -1,0 +1,21 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Jim Crittenden -- UI-UX Designer
+    Jason McCoy -- Front-End Developer -- @hoppedupdesigns
+    Dustin Schultz -- Front-End Developer 
+    Nick Donley -- Front-End Developer 
+    Bobby Cathey -- Software Engineer
+
+# THANKS
+
+    Domco Technologies
+    Jason Brock
+    Lauren Brock
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Normalize.css, jQuery, Modernizr, gulp, Sass, PHP, AJAX

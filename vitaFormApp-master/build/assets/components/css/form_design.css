@@ -1,0 +1,120 @@
+/* 
+    Created on : Dec 3, 2014, 9:27:49 AM
+    Author     : James
+*/
+
+.form, .a-form {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+.a-form {
+    border: 5px solid rgba(200, 200, 200, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 40%;
+    position: relative;
+    margin: auto;
+    height: auto;
+    min-width: 240px;
+}
+.a-form .form-container {
+    border: 2px solid #a0a0a0;
+    border-radius: 3.6px;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+}
+.a-form .form-container *:not(i) {
+    font-family: formFont;
+}
+.a-form .form-container .form-header {
+    background: #f7f7f7;
+    /* Old browsers */
+    
+    background: linear-gradient(to bottom, #f7f7f7 0%, #efefef 100%);
+    /* W3C */
+    
+    border-bottom-left-radius: 0.6px;
+    border-bottom: 2px solid #a0a0a0;
+    border-top-left-radius: 3.4px;
+    border-top-right-radius: 2.7px;
+    box-sizing: border-box;
+    height: 43px;
+    position: relative;
+    top: 1px;
+    width: 100%;
+}
+.a-form .form-container .form-header span {
+    font-weight: bold;
+    text-align: center;
+    font-size: 19px;
+    width: 100%;
+    display: block;
+    padding-top: 10px;
+}
+.a-form .form-container .form-content {
+    background: linear-gradient(to right, #f7f7f7 0%, #efefef 100%);
+    /* W3C */
+    
+    border-bottom-left-radius: 0.6px;
+    border-bottom-right-radius: 0.6px;
+    border-top: 1px solid #fff;
+    box-sizing: border-box;
+    height: auto;
+    position: relative;
+    width: 100%;
+}
+.b-form {
+    min-width: 270px;
+    width: 25%;
+}
+.b-form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.b-form .form-container {
+    border-radius: 3.6px;
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+}
+.b-form .form-container *:not(i) {
+    font-family: formFont;
+}
+.b-form .form-container .form-header {
+    background: linear-gradient(to bottom, #f7f7f7 0%, #efefef 100%) repeat scroll 0 0 transparent;
+    border-bottom: 2px solid #a0a0a0;
+    border-bottom-left-radius: 0.6px;
+    border-top-left-radius: 3.4px;
+    border-top-right-radius: 2.7px;
+    box-sizing: border-box;
+    height: 15%;
+    position: relative;
+    top: 1px;
+    width: 100%;
+}
+.b-form .form-container .form-header span {
+    display: block;
+    font-size: 19px;
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+.b-form .form-container .form-content {
+    background: linear-gradient(to right, #f7f7f7 0%, #efefef 100%) repeat scroll 0 0 transparent;
+    border-bottom-left-radius: 0.6px;
+    border-bottom-right-radius: 0.6px;
+    border-top: 1px solid #fff;
+    box-sizing: border-box;
+    height: 85%;
+    position: relative;
+    width: 100%;
+    background: red;
+}
+/*# sourceMappingURL=form_design.css.map */

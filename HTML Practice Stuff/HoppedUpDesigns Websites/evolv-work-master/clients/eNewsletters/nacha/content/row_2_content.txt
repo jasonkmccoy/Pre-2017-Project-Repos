@@ -1,0 +1,8 @@
+<!-- ROW 2 -->
+<tr>
+    <td>
+        <img src="images/finished_images/people_icon.png" alt="people icon" width="41" height="37" />
+        <h1>Coming Soon: Payments 2014</h1>
+            APRIL 6-9, 2014 | ORLANDO, FL
+    </td>
+</tr>

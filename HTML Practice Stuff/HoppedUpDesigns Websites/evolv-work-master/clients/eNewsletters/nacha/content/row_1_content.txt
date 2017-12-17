@@ -1,0 +1,15 @@
+<!-- ROW 1 -->
+<tr>
+    <td>
+        <!-- BACKGROUND IMAGE -->
+        <img src="images/finished_images/header_bg.jpg" alt="header background image" width="800" height="113" border="0" style="display:block;" />
+        <!-- NACHA LOGO -->
+        <img src="images/finished_images/logo.png" alt="NACHA logo" width="223" height="53" border="0" style="display:block;" />
+        <!-- TWITTER ICON -->
+        <img src="images/finished_images/twitter_icon.png" alt="twitter icon" width="40" height="40" border="0" style="display:block;" />
+        <!-- TEXT TO THE RIGHT OF TWITTER ICON -->
+        Learn about our events as they develop
+        Follow <a href="https://twitter.com/NACHAOnline"  target="_blank">@NACHAOnline</a> 
+    </td>
+</tr>
+

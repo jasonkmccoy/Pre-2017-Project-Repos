@@ -1,0 +1,40 @@
+// Start of sidebar styles for domco-template.html
+#page-sidebar {
+    width: 200px;
+    position: absolute;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: rgb(204, 204, 204);
+}
+/* Search */
+#sidebar-search {
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    border-bottom: 1px solid #eee;
+    background-color: #eee;
+}
+#sidebar-search input[type=text] {
+    padding: 0 10px;
+    height: 30px;
+    line-height: normal;
+    width: 157px;
+    border: none;
+    background-color: #eee;
+    font-style: italic;
+    font-size: 12px;
+}
+.lt-ie9 #sidebar-search input[type=text] {
+    line-height: 30px;
+}
+#sidebar-search button {
+    border: none;
+    background-color: #eee;
+    margin: 5px 0 0;
+    padding: 0;
+    color: #999;
+}
+#sidebar-search button:hover {
+    color: #fff;
+}
+// End of sidebar styles for domco-template.html

@@ -1,0 +1,302 @@
+
+
+
+1. The process for working with AJAX requires 4 steps:
+
+    i. Create an XMLHTTP Request object
+       The new XMLHttpRequest(); object is required if you want to use AJAX
+       Create a new XMLHttpRequest(); for each task you want to perform.
+
+    ii. Create a callback function.
+       The callback function is the programming you want the browser to run when the 
+       server sends back its response.
+       You can never tell in which order your AJAX callbacks will run.
+       To trigger the call back, we use a special browser event.
+       AJAX comes with its' own set of events,
+       We can add programming to respond to those events.
+       The most important is the onreadystatechange event.
+
+    iii. Open a request.
+       Use the xhr open function which requires two pieces of infomation:
+            a. The first is the HTTP method that you're going to use
+               which is most commonly either GET or POST.
+            b. The second is the URL where the request is going.
+        Example:
+        xhr.open('GET', 'sidebar.html');
+
+    iv. Send the request.
+       Sending the request takes a simple piece of code.
+       Example:
+       xhr.send();
+
+2.  AJAX Response Formats:
+
+    <contacts>
+        <contact>
+            <name>Andy</name>
+            <phone>555-888-0909</phone>
+        </contact>
+        <contact>
+            <name>Mary</name>
+            <phone>555-777-0123</phone>
+        </contact>
+    </contacts>
+
+3. AJAX Security Limitations:
+    
+    AJAX is normally limited by a web browsers "same origin" policy,
+    which controls how JavaScript can access content from a web server.
+
+4. Things you CAN'T do with AJAX requests:
+
+    a. Access other web servers.
+
+    b. Request data from another website.
+
+    c. Switch protocols.
+
+    d. Switch port numbers.
+
+    e. Switch hosts.
+
+5. Ways to get around the same origin policy:
+
+    a. Create a web proxy.
+
+    b. JSONP - JSON with Padding.
+
+    c. CORS - Cross-Origin Resource Sharing.
+
+6. AJAX doesn't work unless you are viewing your page on a web server.
+   This means if you are working locally, you need to have MAMP or VirtualBox
+   running even though the pages are HTML files.
+
+7. AJAX Callbacks:
+   A callback is the programming you want to run when the server sends back its response.
+   It's the programming that does something with that response like presenting a forms successfully submitted message, or adding a list of new tweets to the page, or adding new tiles to a map.
+
+8. Ready state:
+   Each stage of the AJAX process, from creating an XML HTTP request
+   object, to opening a request, to sending it, involves what's called a ready state.
+   When a browser reaches a new step in the process, the ready state of the request changes.
+   You create a callback that responds to a change in that state.
+   Let's look at the code from the last stage.
+   The function here is our callback function.
+   It's also called an event handler.
+   The event in this case is onreadystatechange.
+   Every time it fires, our function runs.
+   
+9. readyState property:
+   The XML HTTP request object's readyState property holds a number from 0 to 4.
+   The number represents each state of the AJAX request.
+   The numbers zero to three represent early stages in the AJAX process, from just after the
+   XML HTTP request object is created, 0, all the way to when the response is coming, 3.
+   But most importantly for our program is a ready state of 4.
+   That's when the web server has sent everything it's going to send.
+   In other words, the ready state change event
+   fires off multiple times in the process of
+   setting up and making an AJAX request, but
+   we're only concerned when the ready state is 4.
+
+10. status object:
+    The status property is a number sent from the server.
+
+    Common status property values:
+
+        a. 200:
+            200 means okay, and is the standard response for a successful HTTP request.
+            Other numbers usually aren't good.
+
+        b. 404:
+            404 is the status for a file not found.
+
+        c. 401: 
+            You would get a 401 response if you're not authorized to access a 
+            URL because it requires some kind of login or other permissions to access.
+
+        d. 500:
+            A status of 500 pops up when the server has some kind of error, often the 
+            server-side program that's processing the request isn't working.
+
+11.  statusText:
+     Accompanying the status object is an explanation of the status.
+     This is called status text.
+     The statusText for a value of 404 is "file not found".
+     You can use the statusText as part of an error message that you 
+     display to the user.
+
+12. JSON ( JavaScript Object Notation ):
+    JSON is a simple data format that uses sets of key/value pairs to store information.
+
+13.  Steps review and code examples:
+
+/* Step 1: Create a XMLHTTP Request object */
+/* var xhr = new XMLHttpRequest(); */
+
+/* Step 2: Create a callback function */
+/* xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      document.getElementById('ajax').innerHTML = xhr.responseText;
+    }
+  }; */
+
+/* Step 3: Open a request  */
+/* xhr.open('GET', 'sidebar.html'); */
+
+/* Step 4: Send the request */
+/* xhr.send(); */
+
+/* Example with all the steps (plain ole JavaScript version) */
+/* var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'sidebar.html');
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      document.getElementById('ajax').innerHTML = xhr.responseText;
+    }
+  };
+
+  function sendAJAX() {
+    xhr.send();
+    document.getElementById('load').style.display = 'none';
+  } */
+
+/* Same example as above but this time using jQuery */
+/* function sendAJAX() {
+    $('#ajax').load('sidebar.html');
+    $('#load').hide();
+  } */
+
+
+14.  JQUERY AJAX SHORTHAND METHODS:
+
+      /* a. get() */
+
+// Long way to write a jQuery call
+// jQuery.get(url, data, callback);
+
+// Short way (prefered method) to write a jQuery call
+// $.get(url, data, callback);
+
+// First Example:
+// var url = 'employees.php';
+// var data = {
+//  firstName: "Dave",
+//  lastName: "Jones"
+// };
+// var callback = function(response) {
+//  do something with the data here
+// };
+// $.get(url, data, callback);
+
+// Second Example
+/*
+<script>
+  function sendAJAX() {
+    $.get('sidebar.html', function(response) {
+      $('#ajax').html(response);
+    });
+    $('#load').hide();
+  }
+</script>
+*/
+
+      /* b. jQuery.getJSON() */
+
+        // Syntax:
+        $.getJSON(url, data, callback);
+
+        // Example:
+/*
+$(function() {
+  var url = '../data/employees.json';
+  $.getJSON(url, function(response) {
+    var statusHTML = '<ul class="bulleted">';
+    $.each(response, function(index,employee) {
+      if(employee.inoffice === true) {
+         statusHTML += '<li class="in">';
+      } else {
+        statusHTML += '<li class="out">';
+      }
+      statusHTML += employee.name + '</li>';
+    }); // end of $.each() function
+    statusHTML += '</ul>';
+    $('#employeeList').html(statusHTML);
+  }); // end getJSON() function
+}); // end of Handler for .ready() called.
+ */
+
+      /* c. jQuery.getScript() */
+
+      /* d. jQuery.post() */
+
+      // Syntax:
+      $.post(url, data, callback);
+
+      // First Example:
+/*
+var url = "http://website.com/posts";
+var data = {
+  firstName: "Jason",
+  lastName: "McCoy"
+};
+$.post(url, data, callback);
+ */
+
+      /* e. .load() */
+
+15. jQuery each() function:
+
+// each() syntax
+// $.each(array_or_object, callback);
+
+// Example:
+
+/* var data = [
+  'a',
+  'b',
+  'c',
+  'd',
+  'e'
+];
+
+$.each(data, function(index,value) {
+  console.log(index,value);
+}); */
+
+16. The jQuery AJAX Method:
+
+    // syntax
+    // the url argument is the same as in the other methods
+    // The settings argument is a JavaScript object containing one or
+    // more key value pairs that set various options of the request.
+    $.ajax(url,settings);
+
+17. Handling AJAX Errors:
+    // Make use of jQuery "chaining"
+
+  // Example:
+  // use fail() method if the get() method fails
+
+/*
+  $(function) {
+    $.get('missing.html', function(data) {
+      $('#myDiv').html(data);
+    }).fail(function(jQueryXHR) {
+      var errorMessage = "<p>Sorry! There's been an error. ";
+      errorMessage += "Please try again later.</p>";
+      $('#myDiv').html(errorMessage);
+    }); // end of .get() with chained fail() method
+  }); // end of ready
+ */
+
+18. NOTE (times when fail() method will NOT work):
+
+      One thing to keep in mind about jQuery's
+      fail method, it doesn't work for $.load method, and
+      it doesn't work for remote AJAX requests that use
+      JSONP that is request to a different web server.
+      So if you're using AJAX to download tweets from Twitter
+      or photos from Flickr, the fail method won't ever run.
+      For those cases, you need to check the response in
+      the normal success callback to see how the server responded.
+     

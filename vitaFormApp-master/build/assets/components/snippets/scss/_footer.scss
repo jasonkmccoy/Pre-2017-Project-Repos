@@ -1,0 +1,27 @@
+// Start of footer styles
+.page-footer {
+    line-height: 1.875em;
+    background-color: #f6f6f6;
+    height: 31px;
+    display: block;
+    float: left;
+    display: block;
+    @include span-columns(10);
+    @include shift(2);
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    text-align: center;
+}
+.page-footer p {
+    font-size: 0.875em;
+    margin: 0;
+}
+.page-footer a {
+    color: #63b1c9;
+    text-decoration: none;
+    font-weight: bold;
+}
+.page-footer a:hover {
+    text-decoration: underline;
+}
+// End of footer styles

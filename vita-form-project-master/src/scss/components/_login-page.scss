@@ -1,0 +1,107 @@
+/* CSS for login (index/home page) */
+#login-page-body {
+    @include padding(3.125, 0, 0, 0);
+    background-image: url('../img/login_bg.png');
+    background-position: top center;
+    background-repeat: repeat-y;
+    background-size: 0.375em 0.063em;
+    font-weight: 400;
+    font-size: 1em;
+    overflow-x: hidden;
+}
+.login-label {
+    color: #616161;
+    font-size: 12px;
+    padding: 0 4px;
+}
+.login-input {
+    color: #000000;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: normal;
+    border-color: #bfbfbf;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) inset;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    padding: 3px 5px;
+    margin: 6px 0 0 4px;
+    width: 170px;
+}
+.login-form {
+    margin-bottom: 14px;
+    width: 200px;
+    height: 138px;
+}
+.label-container {
+    text-align: left;
+    height: 60px;
+    width: auto;
+    padding: 4px 0 0 5px;
+    white-space: normal;
+    vertical-align: top;
+}
+.input-container {
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: top;
+}
+.green-btn, .red-btn, .blue-btn {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border-style: solid;
+    border-width: 1px;
+    float: right;
+    margin: 5px 10px 4px;
+    padding: 4px 15px;
+    cursor: pointer;
+}
+.green-btn {
+    float: right;
+    background-color: #45af67;
+    border-color: #269226;
+}
+.red-btn {
+    float: left;
+    background-color: #d35555;
+    border-color: #a22f2f;
+}
+.blue-btn {
+    float: left;
+    background-color: #31b5d6;
+    border-color: #098ca7;
+}
+.green-btn:hover {
+    background-color: #269226;
+}
+.red-btn:hover {
+    background-color: #a22f2f;
+}
+.blue-btn:hover {
+    background-color: #098ca7;
+}
+.incorrect {
+    color: #d90000;
+    font-size: 12px;
+    padding: 5px 9px;
+    text-align: center;
+}
+.home-page-login {
+    border-collapse: collapse;
+    width: 200px !important;
+    height: auto;
+    border-color: #e0e0e0;
+    border-width: 5px;
+    border-style: solid;
+    background-color: #ffffff;
+    margin: 18px auto;
+    padding: 5px 5px 30px 5px;
+    font-size: 16px;
+    display: block;
+}
+/* end css for login */

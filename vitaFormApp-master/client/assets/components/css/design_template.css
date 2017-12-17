@@ -1,0 +1,408 @@
+/* 
+    Created on : Dec 23, 2014, 8:07:49 AM
+    Author     : James
+*/
+.vitacon2.plus, .vitacon2.minus {
+    background: url("../img/sprites/sprites_reg_3.svg") no-repeat;
+}
+/*
+*****************************
+    Team
+*****************************
+*/
+
+.vitacon2.plus {
+    background-position: -48px -4px;
+    width: 18px;
+    height: 17px;
+    position: relative;
+    margin: auto auto 1px;
+    transform: scale(1.7);
+}
+.vitacon2.minus {
+    background-position: -70px -4px;
+    width: 18px;
+    height: 17px;
+    position: relative;
+    margin: auto auto 1px;
+    transform: scale(1.7);
+}
+.vitacon {
+    background: url("../img/sprites/sprites_reg_2.svg") no-repeat;
+}
+.vitacon.search {
+    background-position: 0 0px;
+    width: 17px;
+    height: 18px;
+}
+.vitacon.search-active {
+    background-position: -19px 0;
+    width: 17px;
+    height: 18px;
+}
+.vitacon.user {
+    background-position: 0 -24px;
+    width: 16px;
+    height: 15px;
+}
+.vitacon.user-active {
+    background-position: -20px -24px;
+    width: 16px;
+    height: 15px;
+}
+.vitacon.password {
+    background-position: 0 -43px;
+    width: 16px;
+    height: 8px;
+}
+.vitacon.password-active {
+    background-position: -18px -44px;
+    width: 15px;
+    height: 8px;
+}
+.vitacon.gear {
+    background-position: 0 -82px;
+    width: 13px;
+    height: 14px;
+}
+.vitacon.gear:hover {
+    background-position: 0 -98px;
+    width: 13px;
+    height: 13px;
+}
+.vitacon.trash {
+    background-position: 0 -114px;
+    width: 13px;
+    height: 15px;
+}
+.vitacon.trash:hover {
+    background-position: 0 -138px;
+    width: 12px;
+    height: 15px;
+}
+.vitacon.leftarrow {
+    background-position: -37px -78px;
+    width: 32px;
+    height: 34px;
+    transform: scale(0.7);
+}
+.vitacon.leftarrow:hover {
+    background-position: -37px -39px;
+}
+.vitacon.rightarrow {
+    background-position: -73px -38px;
+    width: 32px;
+    height: 34px;
+    transform: scale(0.7);
+}
+.vitacon.rightarrow:hover {
+    background-position: -74px -78px;
+}
+.vitacon.checkmarkButton {
+    background-position: 0 -160px;
+    width: 129px;
+    height: 32px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.vitacon.checkmarkButton > span:first-child {
+    display: block;
+    float: left;
+    font-size: 0.8rem;
+    line-height: 31px;
+    width: 73%;
+    height: 100%;
+    margin: auto;
+    text-transform: uppercase;
+    text-shadow: white 0 1px 0;
+    font-family: montserrat;
+}
+.vitacon.checkmarkButton > span:first-child:active {
+    text-shadow: #505050 0 1px 0;
+}
+.vitacon.checkmarkButton:active {
+    background-position: 0 -196px;
+    width: 129px;
+    height: 32px;
+    color: #FFF;
+}
+.vitacon.xButton {
+    background-position: 0 -231px;
+    width: 129px;
+    height: 32px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.vitacon.xButton > span:first-child {
+    display: block;
+    float: left;
+    font-size: 0.8rem;
+    line-height: 31px;
+    width: 73%;
+    height: 100%;
+    margin: auto;
+    text-transform: uppercase;
+    text-shadow: white 0 1px 0;
+    font-family: montserrat;
+}
+.vitacon.xButton > span:first-child:active {
+    text-shadow: #505050 0 1px 0;
+}
+.vitacon.xButton:active {
+    background-position: 0 -267px;
+    width: 129px;
+    height: 32px;
+    color: #FFF;
+}
+.vitacon.usbButton {
+    background-position: 0 -301px;
+    width: 129px;
+    height: 32px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.vitacon.usbButton > span:first-child {
+    display: block;
+    float: left;
+    font-size: 0.8rem;
+    line-height: 31px;
+    width: 73%;
+    height: 100%;
+    margin: auto;
+    text-transform: uppercase;
+    text-shadow: white 0 1px 0;
+    font-family: montserrat;
+}
+.vitacon.usbButton > span:first-child:active {
+    text-shadow: #505050 0 1px 0;
+}
+.vitacon.usbButton:active {
+    background-position: 0 -334px;
+    width: 129px;
+    height: 32px;
+    color: #FFF;
+}
+.vitacon.add {
+    background-position: -41px -2px;
+    width: 31px;
+    height: 31px;
+}
+.vitacon.remove {
+    background-position: -73px -1px;
+    width: 31px;
+    height: 31px;
+}
+.vitacon.calendar {
+    background-position: 0 -56px;
+    width: 21px;
+    height: 21px;
+}
+.vita-form input[type="text"], .vita-form input[type="password"], .vita-form input[type="email"] {
+    background-color: #FFF;
+    border: 1px solid #ADADAD;
+    border-radius: 3px;
+    height: 22px;
+    width: 200px;
+}
+.vita-form input[type="text"]:focus, .vita-form input[type="password"]:focus, .vita-form input[type="email"]:focus {
+    border-color: #505050;
+}
+.vita-form input[type="radio"], .vita-form input[type="checkbox"] {
+    display: none;
+}
+.vita-form input[type="checkbox"] + label, .vita-form input[type="radio"] + label {
+    color: #505050;
+}
+.vita-form input[type="checkbox"] + label span {
+    display: inline-block;
+    background: url("../img/sprites/sprites_reg_2.svg") no-repeat -86px -118px;
+    width: 15px;
+    height: 14px;
+    cursor: pointer;
+    margin: 0 1px -2px 2px;
+}
+.vita-form input[type="checkbox"]:checked + label span {
+    background: url("../img/sprites/sprites_reg_2.svg") no-repeat -86px -135px;
+}
+.vita-form input[type="radio"] + label span {
+    display: inline-block;
+    background: url("../img/sprites/sprites_reg_2.svg") no-repeat -105px -118px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin: 0px 2px -2px 1px;
+}
+.vita-form input[type="radio"]:checked + label span {
+    background: url("../img/sprites/sprites_reg_2.svg") no-repeat -105px -134px;
+}
+.vita-form #select-container {
+    position: relative;
+}
+.vita-form #select-container #vita-select {
+    background: none repeat scroll 0 0 #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 34px;
+    overflow: hidden;
+    width: 240px;
+}
+.vita-form #select-container #vita-select .dropdown-button {
+    background: #40afff;
+    /* Old browsers */
+    
+    background: -moz-linear-gradient(top, #40afff 45%, #407dff 100%);
+    /* FF3.6+ */
+    
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(45%, #40afff), color-stop(100%, #407dff));
+    /* Chrome,Safari4+ */
+    
+    background: -webkit-linear-gradient(top, #40afff 45%, #407dff 100%);
+    /* Chrome10+,Safari5.1+ */
+    
+    background: -o-linear-gradient(top, #40afff 45%, #407dff 100%);
+    /* Opera 11.10+ */
+    
+    background: -ms-linear-gradient(top, #40afff 45%, #407dff 100%);
+    /* IE10+ */
+    
+    background: linear-gradient(to bottom, #40afff 45%, #407dff 100%);
+    /* W3C */
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#40afff', endColorstr='#407dff', GradientType=0);
+    /* IE6-9 */
+    
+    border-bottom-right-radius: 3px;
+    border-left: 1px solid #11b5ff;
+    border-top-right-radius: 3px;
+    float: right;
+    height: 100%;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 36px;
+}
+.vita-form #select-container #vita-select .dropdown-button .arrow {
+    background: none repeat scroll 0 0 transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid #c8c8c8;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    right: 11px;
+    top: 12px;
+    width: auto;
+}
+.vita-form #select-container #vita-select .dropdown-button .arrow .inner-arrow {
+    background: none repeat scroll 0 0 transparent;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 9.9px solid #f4f4f4;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    right: -5.5px;
+    top: -11px;
+    width: auto;
+}
+.vita-form #select-container #vita-dropdown {
+    background: none repeat scroll 0 0 #f4f4f4;
+    border: 2px solid #40afff;
+    border-radius: 4px;
+    height: 160px;
+    left: 8px;
+    position: absolute;
+    top: 55px;
+    width: 227px;
+}
+.vita-form #select-container #vita-dropdown .dropdown-arrow {
+    background: none repeat scroll 0 0 transparent;
+    border-bottom: 19px solid #40afff;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    height: 0;
+    position: absolute;
+    right: 4px;
+    top: -20px;
+    width: 0;
+}
+.vita-form #select-container #vita-dropdown .dropdown-list {
+    float: left;
+    height: 100%;
+    list-style: outside none none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.vita-form #select-container #vita-dropdown .dropdown-list li {
+    position: relative;
+    width: 223px;
+    height: 30px;
+}
+.vita-form #select-container #vita-dropdown .dropdown-list li:hover {
+    background: #e6e6e6;
+    border-left: 5px solid #40afff;
+}
+.vita-form #select-container #vita-dropdown .dropdown-list li span {
+    font-family: montserrat;
+    height: 100%;
+    left: 5px;
+    position: absolute;
+    top: 4px;
+}
+.sprite-input-container {
+    position: relative;
+    width: 204px;
+}
+.sprite-input-container .sprite-container {
+    border-left: 1px solid #505050;
+    width: 21px;
+    height: 18px;
+    left: 88%;
+    position: absolute;
+    top: 4px;
+    right: 24px;
+}
+.sprite-input-container .sprite-container div {
+    left: 3px;
+    position: relative;
+}
+.sprite-input-container .sprite-container .user {
+    left: 4px !important;
+    top: 1.5px !important;
+}
+.sprite-input-container .sprite-container .password {
+    left: 4px !important;
+    top: 4.6px;
+}
+.sprite-input-container .sprite-container .user-active {
+    left: 4px !important;
+    top: 0.5px !important;
+}
+.sprite-input-container .sprite-container .password-active {
+    left: 4px !important;
+    top: 4.6px;
+}
+.sprite-input-container .sprite-container .calendar {
+    bottom: 2px;
+    left: 2px !important;
+}
+/*# sourceMappingURL=design_template.css.map */

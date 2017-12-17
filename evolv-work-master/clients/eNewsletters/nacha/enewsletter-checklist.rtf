@@ -1,0 +1,155 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+{\fonttbl\f0\fnil\fcharset0 Calibri;\f1\fswiss\fcharset0 Helvetica;\f2\froman\fcharset0 TimesNewRomanPSMT;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue128;\red255\green0\blue0;\red217\green11\blue0;
+}
+{\info
+{\title Checklist for Charles:}
+{\author Office 2004 Test Drive User}}\margl902\margr923\vieww13780\viewh16220\viewkind0
+\deftab720
+\pard\pardeftab720\sl312\slmult1\qc
+
+\f0\b\fs24 \cf0 Responsive HTML Enewsletter Checklist
+\f1\b0 \
+\pard\pardeftab720\sl312\slmult1
+\cf0 \
+\pard\pardeftab720\sl312\slmult1
+
+\f0\b \cf0 Starting Out
+\f1\b0 \
+\pard\tx720\pardeftab720\li720\ri0\sl312\slmult1
+
+\f0 \cf0 ____ Copy this doc into the folder of the project you're working on and check off each item.
+\f1 \
+
+\f0 ____ Review enewsletter design with Lydia to know what areas should be images/editable text.
+\f1 \
+
+\f0 ____ Slice out images from Photoshop. Use {\field{\*\fldinst{HYPERLINK "http://thesiteslinger.com/blog/how-to-make-slicing-suck-less-tips-and-tricks-for-slicing-a-psd/"}}{\fldrslt \cf2 \ul \ulc0 this article}}
+\f1  to make slicing easier.\
+
+\f0 ____ Use our standard 
+\b enewsletter-template.html
+\b0  that includes many fixes in the <head> and <body> tags. \cf3 Do not delete these tags. \cf0 Add your initials and date to the html comment.\uc0\u8232 
+\f1 \
+\pard\tx0\pardeftab720\sl312\slmult1
+
+\f0\b \cf0 Best Practices
+\f1\b0 \
+\pard\tx720\pardeftab720\li720\ri0\sl312\slmult1
+
+\f0 \cf0 ____ Align all cells left, top, etc.
+\f1 \
+
+\f0 ____ Use alt tags for all images with text; use alt=\'94\'94 for spacer gifs and other layout graphics
+\f1 \
+
+\f0 ____ Define width and height for ALL images
+\f1 \
+
+\f0 ____ Add border=0 or border:none to linked images
+\f1 \
+
+\f0 ____ Add padded table to all photos that are incorporated within each article in order to \'93float\'94 images. \cf4 Do not use borders to create this space.
+\f1 \cf0 \
+
+\f0 ____ Make as easy as possible for client to edit \'96 create large areas of editable text 
+\f1 \
+
+\f0 ____ Every rule in media query must have \cf4 !important\cf0  written after it to fix a bug in Yahoo webmail.
+\f1 \
+
+\f0 ____ Add display:block wherever possible to remove unwanted space around images. Always use this on spacer gifs.
+\f1 \
+
+\f0 ____ Fix small spacer gifs from being blown up larger in Outlook 2013 (you can anticipate this with any gif less than ~10px high) See Troubleshooting Doc for instructions.\
+____ If content background color is different from the overall template background color, add a 620px width table somewhere in the template so that there is a bit of margin showing to the left and right of the content. See PATNC enews template as an example. This fixes the content from butting up against the sides of the email window in: Gmail, Yahoo, AOL.
+\f1 \
+\pard\tx0\pardeftab720\sl312\slmult1
+
+\f0 \cf0  
+\f1 \
+\pard\tx0\pardeftab720\sl312\slmult1
+
+\f0\b \cf0 Links
+\f1\b0 \
+\pard\tx720\pardeftab720\li720\ri0\sl312\slmult1
+
+\f0 \cf0 ____ Add bluehornet/icontact codes for links to view online, unsubscribe, forward to a friend, etc.
+\f1 \
+
+\f0 ____ Add all other links given by client such as social media, link to homepage, etc. 
+\f1 \
+
+\f0 ____ Add fake links when necessary <a href=\'94#\'94> like around image buttons. Then ASK CLIENT if you do not know the link to use.
+\f2 \uc0\u8232 
+\f1 \
+\pard\tx0\pardeftab720\sl312\slmult1
+
+\f0\b \cf0 Styles 
+\f1\b0 \
+\pard\tx720\pardeftab720\li720\ri0\sl312\slmult1
+
+\f0 \cf0 ____ Write out hex colors with 6 characters instead of shorthand (3) #000000
+\f1 \
+
+\f0 ____ Customize link and text colors in <head> styles and <body> tag
+\f1 \
+
+\f0 ____ Add font-family, font-size, line-height, and color to \cf3 every cell that contains text\cf0 !
+\f1 \
+
+\f0 ____ Fix addresses/numbers (like in footer) from showing up as links on iPhones by wrapping in a span with the ioslinks class. Customize the ioslinks class to be the desired text color.
+\f1 \
+\
+\pard\tx0\pardeftab720\sl312\slmult1
+\cf0 \
+\pard\tx0\pardeftab720\sl312\slmult1
+
+\f0\b \cf0 Testing/Cleaning Up
+\f1\b0 \
+\pard\tx720\pardeftab720\li720\ri0\sl312\slmult1
+
+\f0 \cf0 ____ Check for missing cells. Browsers will self-correct but Dreamweaver can you show you where they are missing.
+\f1 \
+
+\f0 ____ In Dreamweaver, select View > Code view options > Highlight invalid code then scan your html for anything you may have missed. (Leave this setting turned on)
+\f1 \
+
+\f0 ____ Remove any unused code when finished for example unused styles. Open the newsletter in Chrome, go to Web Developer Tools > Audits and run an Audit on the page. It will show you the unused styles.
+\f1 \
+
+\f0 ____ Upload all images to the server and change all image links to absolute. Upload your sliced photoshop file to the server as well.
+\f1 \
+
+\f0 ____ \cf3 TEST in your browser \cf0 to make sure responsive aspects work properly. Chrome is a good indicator of what will iPhones will display.
+\f1 \
+
+\f0 ____\cf3  TEST in Litmus\cf0  for email client consistency and make adjustments if necessary. Add the client acronym as a Tag on the test, for example \'93aafp\'94 or \'93nccbh\'94
+\f1 \
+
+\f0 ____ After testing and going through this checklist, give link to the email and to the Litmus test to Lydia for review.
+\f1 \
+\pard\tx0\pardeftab720\sl312\slmult1
+\cf0 \
+\
+\pard\tx0\pardeftab720\sl312\slmult1
+
+\f0\b \cf0 If BlueHornet [all HighRoad clients]
+\f1\b0 \
+\pard\tx0\pardeftab720\sl312\slmult1
+
+\f0\b \cf4 Do not use meta tags. 
+\b0 \cf0 Meta tags are stripped out by default by BlueHornet and can sometimes cause the entire head/styles to be removed as well. Instead just use our starter template which works well with that system.
+\f1 \
+\
+\
+\pard\tx0\pardeftab720\sl312\slmult1
+
+\f0\b \cf0 Tips & Tricks
+\f1\b0 \
+\pard\tx0\pardeftab720\sl312\slmult1
+
+\f0 \cf0 Refer to the Troubleshooting document for fixes to common issues that you might see in Litmus. 
+\f1 \
+}

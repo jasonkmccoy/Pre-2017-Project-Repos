@@ -1,0 +1,74 @@
+Git Process for a new Repository
+1. Create a new repository on Github
+2. In Terminal, issue the command:
+    git init [Project Name]
+3. Add all the files by issuing the command:
+    git add —all
+4. Make the first commit by issuing the command:
+    git commit -m “first commit”
+5. Add the Github repository to the project with the command:
+    git remote add origin https://jason-hoppedupdesigns/project-name.git
+6. Pull the Github repository files with the command:
+    git pull https://jason-hoppedupdesigns/project-name.git
+7. Push all files to the Github repository with the command:
+    git push -u origin master
+8. Repeat steps 3, 4 and 7 when updating the Github repository.
+
+<<<<<<< HEAD
+Alternate Way
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/jason-hoppedupdesigns/treehouse_tutorials-introduction_to_git_basics.git
+git push -u origin master
+=======
+>>>>>>> 63ab6799f68bf977fb3ab74c780b67399996df72
+
+Common Git Commands
+
+1. git init [project_name] - initializes a new repository. 
+   If project_name is provided, it creates a new project directory with that name. If not, it initializes a repository in the current directory.
+
+2. git add - adds files to the repository so that Git knows to track their changes.
+(Example:  git add --all): this command adds all the files at once
+
+3. git commit - commits all added files to the repository as a change. 
+   With the -a flag, commits all changes to all tracked files. 
+   With the -m flag, allows you to specify a commit message directly on the command line instead of in your default editor.
+   Example:
+   git commit -a -m "This is a new commit. The -a option commits all the files and the -m option allows you to write the commit summary message"
+
+4. git config - allows you to make configuration changes to Git. 
+   With the --global flag, makes these changes available across your entire system.
+
+5. git status - show the current status of the git repository, including if there are any uncommitted changes and whether or not any of our changes have been put in the staging area.
+
+6. git log - Show us a chronological log of all of our commits to the current repository.
+
+7. git checkout - "check out" a different version of the code from the one you're currently looking at.
+
+8. git diff - create a "diff" view to demonstrate what has changed between two different versions of your repository.
+
+9. git branch branchname - create a new branch named branchname.
+
+10. git checkout branchname - switch to the branch named branchname.
+
+11. git checkout -b branchname - create a new branch named branchname and switch to that branch.
+
+12. git branch - list all branches in the current repository and indicate which branch you're currently in.
+
+13. git branch -D branchname - delete the branch named branchname from the repository.
+
+14. git merge branchname - merge the history from branchname into the current branch.
+
+15. git clone - create a new repository that is a clone of a remote repository.
+
+16. git remote - list all remote repositories associated with the current repository.
+
+17. git remote add - add a new remote repository to the current repository.
+
+18. git push - push your latest changes to a remote repository.
+
+19. git pull - pull the latest changes from a remote repository to your repository.
+

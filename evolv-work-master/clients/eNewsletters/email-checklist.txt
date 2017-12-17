@@ -1,0 +1,46 @@
+Responsive HTML Enewsletter Checklist
+
+Starting Out
+____ Copy this doc into the folder of the project you're working on and check off each item.
+____ Review enewsletter design with Lydia to know what areas should be images/editable text.
+____ Slice out images from Photoshop. Use this article to make slicing easier.
+____ Use our standard enewsletter-template.html that includes many fixes in the <head> and <body> tags. Do not delete these tags. Add your initials and date to the html comment. 
+Best Practices
+____ Align all cells with images or text inside left, top, etc.
+____ Use alt tags for all images with text; use alt=”” for spacer gifs and other layout graphics
+____ Define width and height for ALL images
+____ Add border=0 or border:none to linked images
+____ Add padded table to all photos that are incorporated within each article in order to “float” images. Do not use borders to create this space.
+____ Make as easy as possible for client to edit – create large areas of editable text 
+____ Every rule in media query must have !important written after it 
+____ Add display:block wherever possible to remove unwanted space around images. Always use this on spacer gifs.
+____ Fix small spacer gifs from being blown up larger in Outlook 2013 (you can anticipate this with any gif less than ~10px high) See Troubleshooting Doc for instructions.
+____ If content background color is different from the overall page background color, add a 620px width table somewhere in the template so that there is a bit of margin showing to the left and right of the content. See PATNC enews template as an example. This fixes the content from butting up against the sides of the email window in: Gmail, Yahoo, AOL.
+ 
+Links
+____ Add bluehornet/icontact codes for links to view online, unsubscribe, forward to a friend, etc.
+____ Add all other links given by client such as social media, link to homepage, etc. 
+____ Add fake links when necessary <a href=”#”> like around image buttons. Then ASK CLIENT if you do not know the link to use. 
+Styles 
+____ Write out hex colors with 6 characters instead of shorthand (3) #000000
+____ Customize link and text colors in <head> styles and <body> tag
+____ Add font-family, font-size, line-height, and color to every cell that contains text!
+____ Fix addresses/numbers (like in footer) from showing up as links on iPhones by wrapping in a span with the ioslinks class (included in base template). Customize the ioslinks class to be the desired text color.
+
+
+Testing/Cleaning Up
+____ In Dreamweaver, select View > Code view options > Highlight invalid code then scan your html for anything you may have missed. (Leave this setting turned on)
+____ Copy/Paste your code into HTML Tidy to check code for hanging tags/missing cells/rows, missing alt tags, and code errors. 
+____ Remove any unused code when finished, for example unused styles. Open the newsletter in Chrome, go to Web Developer Tools > Audits and run an Audit on the page. It will show you the unused styles. LEAVE in place the ExternalClass and ioslinks classes.
+____ Upload all images to the server and change all image links to absolute. Upload your sliced photoshop file to the server as well.
+____ TEST in your browser to make sure responsive aspects work properly. Chrome is a good indicator of what iPhones will display.
+____ TEST in Litmus for email client consistency and make adjustments if necessary. Add the client acronym as a Tag on the test, for example “aafp” or “nccbh”
+____ After testing and going through this checklist, give link to the email and to the Litmus test to Lydia for review.
+
+
+If BlueHornet [all HighRoad clients]
+Do not use meta tags. Meta tags are stripped out by default by BlueHornet and can sometimes cause the entire head/styles to be removed as well. Instead just use our starter template which works well with that system.
+
+
+Tips & Tricks
+Refer to the Troubleshooting document for fixes to common issues that you might see in Litmus. 

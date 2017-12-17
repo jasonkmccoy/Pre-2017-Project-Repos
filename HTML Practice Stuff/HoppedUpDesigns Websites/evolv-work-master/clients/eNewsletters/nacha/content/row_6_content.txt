@@ -1,0 +1,11 @@
+<!-- ROW 6 -->
+<tr>
+    <td>
+        <!-- BLOCKQUOTE BACKGROUND IMAGE -->
+        <img src="images/finished_images/blockquote_bg.jpg" alt="blockquote background image" width="800" height="120" />
+        <img src="images/finished_images/quote_icon.png" alt="quote marks icon" width="18" height="15" border="0" style="display:block;" />
+        I LOOK FORWARD TO THE PAYMENTS CONFERENCE EVER YEAR. I<br>
+        ALWAYS RETURN TO WORK WITH NEW TOOLS AND CONNECTIONS.<br>
+        - JUDITH BARNES 
+    </td>
+</tr>

@@ -1,0 +1,45 @@
+// Start of container styles for domco-template.html
+#page-container {
+    width: 100%;
+    min-width: 320px;
+    max-width: 1920px;
+}
+#inner-container {
+    background-color: rgb(221, 221, 221);
+}
+.landing-container .navbar-inner {
+    position: relative;
+}
+.landing-container .brand {
+    float: none;
+    display: inline-block;
+}
+.row-fluid [class*="span"].hide, [class*="span"].hide {
+    display: none;
+}
+.row-fluid [class*="span"].pull-right, [class*="span"].pull-right {
+    float: right;
+}
+.container-fluid {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.container-fluid::after, .container-fluid::before {
+    display: table;
+    content: '';
+    line-height: 0;
+}
+.container-fluid::after {
+    clear: both;
+}
+[class*="span"] {
+    float: left;
+    min-height: 1px;
+    margin-left: 20px;
+}
+// End of container styles for domco-template.html
+
+
+// Start of Container styles for filters-panel.html
+
+// End of Container styles for filters-panel.html

@@ -1,0 +1,28 @@
+// PUT THESE IN ONE AT A TIME
+
+
+
+npm install grunt-contrib-imagemin --save-dev
+npm install grunt-contrib-compass --save-dev
+npm install grunt-autoprefixer --save-dev
+npm install --save-dev grunt-svgmin
+npm install grunt-responsive-images --save-dev
+npm install grunt-notify --save-dev
+npm install grunt-express-server --save-dev
+npm install grunt-bower-task --save-dev
+npm install grunt-node-inspector --save-dev
+npm install grunt-spritesmith --save-dev
+npm install grunt-contrib-jasmine --save-dev
+npm install grunt-mkdir --save-dev
+npm install grunt-curl --save-dev
+npm install grunt-zip --save-dev
+npm install grunt-contrib-copy --save-dev
+npm install --save-dev time-grunt
+npm install grunt-contrib-clean --save-dev
+npm install grunt-contrib-cssmin --save-dev
+npm install grunt-uncss --save-dev
+npm install --save-dev time-grunt
+npm install grunt-contrib-handlebars --save-dev
+npm install --save-dev grunt-concurrent
+npm install grunt-contrib-imagemin --save-dev
+npm install grunt-contrib-requirejs --save-dev

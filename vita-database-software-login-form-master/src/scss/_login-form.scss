@@ -1,0 +1,145 @@
+/* Login Form Styles */
+
+.container {
+    background: linear-gradient(to bottom, #f7f7f7 0%, #efefef 100%);
+    width: 320px;
+    height: auto;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 2.4px;
+    /* top margin is 1/2 of the height of the container */
+    /* left margin is 1/2 of the width of the container */
+    margin: -135px 0 0 -160px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    * {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    #header, #content {
+        border-sizing: box-sizing;
+        position: relative;
+    }
+
+    #header {
+        background: linear-gradient(to bottom, #f7f7f7 0%, #efefef 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        border-bottom: 2px solid #a0a0a0;
+        border-bottom-left-radius: 0.6px;
+        border-top-left-radius: 3.4px;
+        border-top-right-radius: 2.7px;
+        height: 43px;
+        position: relative;
+        top: 1px;
+        width: 100%;
+    }
+
+    #header span {
+        display: block;
+        font-size: 19px;
+        font-weight: bold;
+        padding-top: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    #content {
+        height: 90px;
+        margin: 20px 5px 5px 5px;
+    }
+}
+
+.vita-form {
+    display: inline-block;
+    width: auto;
+    float: left;
+
+    input {
+        &[type="text"], &[type="password"] {
+            padding-left: 5px;
+            background-color: #FFF;
+            border: 1px solid #ADADAD;
+            border-radius: 3px;
+            height: 22px;
+            width: 200px;
+            float: left;
+            &:focus {
+                border-color: #505050;
+            }
+        }
+    }
+}
+
+.sprite-input-container {
+    margin: 0;
+    padding: 0;
+    width: auto;
+
+    .sprite-container {
+        border-left: 1px solid rgb(80, 80, 80);
+        width: 21px;
+        height: 18px;
+        float: right;
+        clear: both;
+        position: relative;
+        bottom: 21px;
+        right: 24px;
+
+        div {
+            left: 3px;
+            position: relative;
+        }
+
+        .user-active {
+            left: 4px !important;
+            top: 0.5px !important;
+        }
+
+        .password-active {
+            left: 4px !important;
+            top: 4.6px;
+        }
+    }
+}
+
+.user {
+    background-position: 0 -24px;
+    width: 16px;
+    height: 15px;
+}
+
+.user-active {
+    background-position: -20px -24px;
+    width: 16px;
+    height: 15px;
+}
+
+.password {
+    background-position: 0 -43px;
+    width: 16px;
+    height: 8px;
+}
+
+.password-active {
+    background-position: -18px -44px;
+    width: 15px;
+    height: 8px;
+}
+
+.login-button {
+    background-position: -124px 0;
+    width: 24px;
+    height: 39px;
+    float: left;
+    position: relative;
+    top: 17px;
+    right: -22px;
+    transform: scale(1.4);
+    display: inline-block;
+}
+
+.centered-inputs {
+    position: relative;
+    top: 10px;
+    left: 35px;
+}

@@ -1,0 +1,15 @@
+#select-operation-criteria-container {
+    padding: 40px 30px 35px 30px;
+    max-width: 640px;
+}
+#select-operation-criteria-container hr, 
+#select-operation-criteria-container h3, 
+#select-operation-criteria-container span {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#select-operation-criteria-container span {
+    padding: 0 5px;
+    font-size: 14px;
+}

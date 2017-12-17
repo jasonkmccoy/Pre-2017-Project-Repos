@@ -1,0 +1,17 @@
+/* mySize - assigns size dimensions to an element*/
+
+@mixin mySize( $width: auto, $min-width: auto, $height: auto, $min-height: auto) {}
+/* myPosition - assigns size dimensions to an element*/
+
+@mixin myPosition( $pos, // Position: rel, abs, fix
+$op, // Operation: (Top/Bottom)-(Left/Right) - examples below
+//(t)op-(l)eft = t-l
+//(t)op-(r)ight = t-r
+//(b)ottom-(l)eft = b-l
+//(b)ottom-(r)ight = b-r
+$p1:auto, // Value 1: Top or Bottom
+$p2:auto // Value 2: Left or Right
+) {}
+/* addCornerRadius - assigns a */
+
+@mixin addCornerRadius($corner, $rad)

@@ -1,0 +1,27 @@
+.login-images {
+    background-image: url("../img/sprites/logo_sprites.png");
+    margin: auto;
+}
+.sprite-vita_sm {
+    background-position: 0 -1297px;
+    width: 80px;
+    height: 80px;
+}
+.home-page-login {
+    border-collapse: collapse;
+    width: 200px;
+    height: auto;
+    border-color: #E0E0E0;
+    border-width: 5px;
+    border-style: solid;
+    background-color: #FFFFFF;
+    margin: 18px auto;
+    padding: 5px 5px 30px 5px;
+}
+.login-form {
+    margin-bottom: 14px;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}

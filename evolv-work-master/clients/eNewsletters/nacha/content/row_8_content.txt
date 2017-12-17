@@ -1,0 +1,6 @@
+<!-- ROW 8 -->
+<tr>
+    <td>
+       <img src="images/finished_images/horizontal_break_image.png" alt="horizontal line break" width="602" height="5" />  
+    </td>
+</tr>

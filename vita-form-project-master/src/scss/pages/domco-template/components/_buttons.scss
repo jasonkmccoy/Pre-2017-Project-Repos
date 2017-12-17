@@ -1,0 +1,147 @@
+// Start of button styles for domco-template.html
+.btn.active, .btn.disabled, .btn:active, .btn:focus, .btn:hover, .btn[disabled] {
+    color: rgb(51, 51, 51);
+    background-color: rgb(230, 230, 230);
+}
+.btn.active, .btn:active {
+    outline: 0px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px;
+    box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px;
+    background-image: none;
+}
+.btn-primary.active, .btn-primary.disabled, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .btn-primary[disabled] {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 68, 204);
+}
+.btn-warning.active, .btn-warning.disabled, .btn-warning:active, .btn-warning:focus, .btn-warning:hover, .btn-warning[disabled] {
+    color: rgb(255, 255, 255);
+    background-color: rgb(248, 148, 6);
+}
+.btn-danger.active, .btn-danger.disabled, .btn-danger:active, .btn-danger:focus, .btn-danger:hover, .btn-danger[disabled] {
+    color: rgb(255, 255, 255);
+    background-color: rgb(189, 54, 47);
+}
+.btn-success.active, .btn-success.disabled, .btn-success:active, .btn-success:focus, .btn-success:hover, .btn-success[disabled] {
+    color: rgb(255, 255, 255);
+    background-color: rgb(81, 163, 81);
+}
+.btn-info.active, .btn-info.disabled, .btn-info:active, .btn-info:focus, .btn-info:hover, .btn-info[disabled] {
+    color: rgb(255, 255, 255);
+    background-color: rgb(47, 150, 180);
+}
+.btn-inverse.active, .btn-inverse.disabled, .btn-inverse:active, .btn-inverse:focus, .btn-inverse:hover, .btn-inverse[disabled] {
+    color: rgb(255, 255, 255);
+    background-color: rgb(34, 34, 34);
+}
+.btn-group > .btn, .btn-group > .dropdown-menu, .btn-group > .popover {
+    font-size: 14px;
+}
+.btn-group > .btn:last-child, .btn-group > .dropdown-toggle {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.btn-group > .btn.large:last-child, .btn-group > .large.dropdown-toggle {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.btn-group > .btn.active, .btn-group > .btn:active, .btn-group > .btn:focus, .btn-group > .btn:hover {
+    z-index: 2;
+}
+.btn-group .dropdown-toggle:active, .btn-group.open .dropdown-toggle {
+    outline: 0px;
+}
+.btn-group > .btn + .dropdown-toggle {
+    padding-left: 8px;
+    padding-right: 8px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.121569) 1px 0px 0px inset, rgba(255, 255, 255, 0.2) 0px 1px 0px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px;
+    box-shadow: rgba(255, 255, 255, 0.121569) 1px 0px 0px inset, rgba(255, 255, 255, 0.2) 0px 1px 0px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px;
+}
+.btn-group > .btn-mini + .dropdown-toggle {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.btn-group > .btn-large + .dropdown-toggle {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.btn-group.open .dropdown-toggle {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px;
+    box-shadow: rgba(0, 0, 0, 0.14902) 0px 2px 4px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px;
+    background-image: none;
+}
+.btn-group.open .btn.dropdown-toggle {
+    background-color: rgb(230, 230, 230);
+}
+.btn-group.open .btn-primary.dropdown-toggle {
+    background-color: rgb(0, 68, 204);
+}
+.btn-group.open .btn-warning.dropdown-toggle {
+    background-color: rgb(248, 148, 6);
+}
+.btn-group.open .btn-danger.dropdown-toggle {
+    background-color: rgb(189, 54, 47);
+}
+.btn-group.open .btn-success.dropdown-toggle {
+    background-color: rgb(81, 163, 81);
+}
+.btn-group.open .btn-info.dropdown-toggle {
+    background-color: rgb(47, 150, 180);
+}
+.btn-group.open .btn-inverse.dropdown-toggle {
+    background-color: rgb(34, 34, 34);
+}
+.btn .caret {
+    margin-top: 8px;
+    margin-left: 0px;
+}
+.btn-large .caret {
+    margin-top: 6px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+}
+.btn-mini .caret, .btn-small .caret {
+    margin-top: 8px;
+}
+.dropup .btn-large .caret {
+    border-bottom-width: 5px;
+}
+.btn-danger .caret, .btn-info .caret, .btn-inverse .caret, .btn-primary .caret, .btn-success .caret, .btn-warning .caret {
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+}
+.btn [class*=" icon-"].icon-large, .btn [class^="icon-"].icon-large, .nav [class*=" icon-"].icon-large, .nav [class^="icon-"].icon-large {
+    line-height: 0.9em;
+}
+.btn [class*=" icon-"].icon-spin, .btn [class^="icon-"].icon-spin, .nav [class*=" icon-"].icon-spin, .nav [class^="icon-"].icon-spin {
+    display: inline-block;
+}
+.btn:hover, .btn:focus, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
+    background-color: rgb(221, 221, 221);
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+    background: rgb(0, 68, 204);
+}
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.disabled, .btn-success[disabled] {
+    background: rgb(81, 163, 81);
+}
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled] {
+    background: rgb(189, 54, 47);
+}
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .btn-warning.disabled, .btn-warning[disabled] {
+    background: rgb(248, 148, 6);
+}
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .btn-info.disabled, .btn-info[disabled] {
+    background: rgb(47, 150, 180);
+}
+.btn-inverse:hover, .btn-inverse:focus, .btn-inverse:active, .btn-inverse.active, .btn-inverse.disabled, .btn-inverse[disabled] {
+    background: rgb(34, 34, 34);
+}
+.btn-link:hover, .btn-link:focus, .btn-link:active, .btn-link.active, .btn-link.disabled, .btn-link[disabled] {
+    background: transparent;
+}
+// End of button styles for domco-template.html
+
+// Start of Button styles for filters-panel.html
+
+// End of Button styles for filters-panel.html

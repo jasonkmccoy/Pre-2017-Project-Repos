@@ -1,0 +1,123 @@
+@function addOpacity($color:black, $opacity: null) {
+    $thisRed: red($color);
+    $thisGreen: green($color);
+    $thisBlue: blue($color);
+    @if ($opacity) {
+        @return rgba($thisRed, $thisGreen, $thisBlue, $opacity)
+    }
+    @else {
+        @return rgba($thisRed, $thisGreen, $thisBlue, 1)
+    }
+}
+@mixin respond-to($media) {
+    @if $media= handhelds {
+        @media only screen and (max-width: $break-small) {
+            @content;
+        }
+    }
+    @else if $media= medium-screens {
+        @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) {
+            @content;
+        }
+    }
+    @else if $media= wide-screens {
+        @media only screen and (min-width: $break-large) {
+            @content;
+        }
+    }
+}
+@mixin mySize($width: auto, $min-width: auto, $height: auto, $min-height: auto) {
+    width: $width;
+    min-width: $min-width;
+    height: $height;
+    min-height: $min-height;
+}
+@mixin myPosition($pos, $op, $p1:auto, $p2:auto) {
+    @if $pos= abs {
+        position: absolute;
+    }
+    @else if $pos= rel {
+        position: relative;
+    }
+    @else if $pos= fix {
+        position: fixed;
+    }
+    @if $op= t-l {
+        top: $p1;
+        left: $p2;
+    }
+    @else if $op= t-r {
+        top: $p1;
+        right: $p2;
+    }
+    @else if $op= b-l {
+        bottom: $p1;
+        left: $p2;
+    }
+    @else if $op= b-r {
+        bottom: $p1;
+        right: $p2;
+    }
+}
+@mixin build-Box() {
+    background-color: $main-green;
+}
+@mixin addCornerRadius($corner, $rad) {
+    @if $corner= t-l {
+        -moz-border-radius-topleft: $rad;
+        -webkit-border-top-left-radius: $rad;
+        border-top-left-radius: $rad;
+    }
+    @else if $corner= t-r {
+        -moz-border-radius-topright: $rad;
+        -webkit-border-top-right-radius: $rad;
+        border-top-right-radius: $rad;
+    }
+    @else if $corner= b-l {
+        -moz-border-radius-bottomleft: $rad;
+        -webkit-border-bottom-left-radius: $rad;
+        border-bottom-left-radius: $rad;
+    }
+    @else if $corner= b-r {
+        -moz-border-radius-bottomright: $rad;
+        -webkit-border-bottom-right-radius: $rad;
+        border-bottom-right-radius: $rad;
+    }
+}
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $color;
+        -moz-box-shadow: inset $top $left $blur $color;
+        box-shadow: inset $top $left $blur $color;
+    }
+    @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+@mixin letterpress($color, $opacity) {
+    text-shadow: addOpacity($color, $opacity) 0 1px 0;
+}
+@mixin linear-gradient($start: #f1f1f1, $from: 0%, $stop: #d9d9d9, $to: 100%) {
+    background: $start;
+    background: -webkit-gradient(linear, left top, left bottom, from($start), to($stop));
+    background: -moz-linear-gradient(center top, $start $from, $stop $to);
+    background: -moz-gradient(center top, $start $from, $stop $to);
+    background: -webkit-linear-gradient(top, $start $from, $stop $to);
+    background: -o-linear-gradient(top, $start $from, $stop $to);
+    background: -ms-linear-gradient(top, $start $from, $stop $to);
+    background: linear-gradient(to bottom, $start $from, $stop $to);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#{$start}', endColorstr='#{$stop}', GradientType=0);
+}
+@mixin clearfix() {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

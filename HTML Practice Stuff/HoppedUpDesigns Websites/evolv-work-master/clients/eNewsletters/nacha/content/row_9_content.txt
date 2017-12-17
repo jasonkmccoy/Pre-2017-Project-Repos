@@ -1,0 +1,8 @@
+<!-- ROW 9 -->
+<tr>
+    <td>
+       &copy; NACHA - The Electronic Payments Association<br>
+        13450 Sunrise Valley Drive, Suite 100, Herndon, VA 20171<br>
+        703-561-1100 &#124; Fax 703-787-0996 &#124; <a href="https://www.nacha.org/" target="_blank">www.nacha.org</a> 
+    </td>
+</tr>

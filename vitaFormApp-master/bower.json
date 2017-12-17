@@ -1,0 +1,33 @@
+{
+  "name": "vita-database-software",
+  "version": "1.0.0",
+  "authors": [
+    "Domco Technologies",
+    "Jim Crittenden",
+    "Jason McCoy",
+    "Dustin Schultz",
+    "Nick Donley",
+    "Bobby Cathey"
+  ],
+  "description": "Vita is an interactive online application which allows you to store data on employees, assets, inventories, just about anything",
+  "main": "gulpfile.js",
+  "keywords": [
+    "framework",
+    "angular",
+    "web",
+    "apps"
+  ],
+  "license": "MIT",
+  "homepage": "http://domco.us",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-apps": "~1.0.2"
+  }
+}

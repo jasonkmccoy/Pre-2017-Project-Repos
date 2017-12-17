@@ -1,0 +1,39 @@
+<table border="0" width="600" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td style="font-family: arial; color: #666666; font-size: 8pt;" align="middle" valign="center">
+<div align="center">Having trouble viewing this mailing? Click <a class="Web Version Of Mailing" href="%%WEB_VERSION%%">here</a> to view the web version.<br />To ensure receipt of this mailing, please add <a href="mailto:chapters@anfponline.org">chapters@anfponline.org</a> to your address book.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&#160;</p>
+<table style="border: #7493af 3px solid;" border="0" width="600" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td bgcolor="#7493af"><img align="middle" alt="" border="0" height="105" src="http://anfp.informz.net/ANFP/data/images/volunteer2web.jpg" width="623" /></td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>
+<table border="0" width="595" cellspacing="0" cellpadding="5" align="center" bgcolor="#ffffff">
+<tbody>
+<tr>
+<td style="font-family: arial; color: #ffffff; font-size: 10pt; font-weight: bold;" align="left" valign="center" width="200"><strong><span style="font-family: Lucida Sans; color: #000000;">DATE HERE</span></strong></td>
+<td style="font-family: arial; color: #ffffff; font-size: 8pt; font-weight: bold;" align="right" valign="center" width="498"><span style="font-family: Lucida Sans;">Forward to a Friend</span></td>
+</tr>
+</tbody>
+</table>
+<hr align="center" noshade="noshade" size="1" width="100%" /></td>
+</tr>
+<tr>
+<td style="text-align: left; font-family: Arial; font-size: 10pt; vertical-align: top; padding: 15px 8px 15px 8px;">
+<p><span style="font-family: Lucida Sans;">CONTENT HERE</span></p>
+</td>
+</tr>
+<tr align="left" valign="center" bgcolor="#7493af">
+<td style="text-align: center; font-style: normal; font-family: arial; color: #231f20; font-size: 8pt; vertical-align: middle; font-weight: bold; padding: 5px;">
+<div align="left"><span style="font-family: Arial;">Association of Nutrition &amp; Foodservice Professionals | 406 Surrey Woods Dr., St. Charles, IL 60174 | 800-323-1908<br />To unsubscribe from all emails, click </span><a href="http://DMA.informz.net/DMA/default.asp?action=u&amp;email=%%EMAIL%%&amp;mi=%%MINSTANCEID%%"><span style="font-family: Arial;">here</span></a><span style="font-family: Arial;">.</spVan></div>
+</td>
+</tr>
+</tbody>
+</table>

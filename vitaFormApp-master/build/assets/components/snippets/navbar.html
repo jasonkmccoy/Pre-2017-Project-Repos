@@ -1,0 +1,55 @@
+<header class="navbar navbar-inverse">
+    <!-- Navbar Inner -->
+    <div class="navbar-inner remove-radius remove-box-shadow">
+        <!-- div#container-fluid -->
+        <div class="container-fluid">
+            <!-- Mobile Navigation, Shows up  on smaller screens -->
+            <ul class="nav pull-right visible-phone visible-tablet">
+                <li class="divider-vertical remove-margin"></li>
+                <li>
+                    <!-- It is set to open and close the main navigation on smaller screens. The class .nav-collapse was added to aside#page-sidebar -->
+                    <a href="javascript:void(0)" data-toggle="collapse" data-target=".nav-collapse">
+                        <i class="fa fa-reorder"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- END Mobile Navigation -->
+
+            <!-- Logo -->
+            <a href="index.php" class="brand"><img src="img/template/logo.png" alt="logo">
+            </a>
+
+            <!-- Loading Indicator, Used for demostrating how loading of widgets could happen, check main.js - uiDemo() -->
+            <div id="loading" class="hide pull-left"><i class="fa fa-certificate fa-spinner"></i>
+            </div>
+
+            <!-- Header Widgets -->
+            <!-- You can create the widgets you want by replicating the following. Each one exists in a <li> element -->
+            <ul id="widgets" class="nav pull-right">
+
+                <!-- User Menu -->
+
+                <li class="dropdown dropdown-user">
+                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><img src="img/template/avatar.png" alt="avatar"> <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- Just a button demostrating how loading of widgets could happen, check main.js- - uiDemo() -->
+                        <li>
+                            <a href="#" class="loading-on" onclick="location.reload();"><i class="icon-refresh"></i> Refresh</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="logout.php" class="exit"><i class="icon-lock"></i> Log out</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- END User Menu -->
+
+            </ul>
+            <!-- END Header Widgets -->
+        </div>
+        <!-- END div#container-fluid -->
+    </div>
+    <!-- END Navbar Inner -->
+</header>

@@ -1,0 +1,248 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat-Regular'), url(http://fonts.gstatic.com/s/montserrat/v6/zhcz-_WihjSQC0oHJ9TCYC3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
+}
+
+/*!
+ * vita-database-software-project
+ * Vita Database Software Project
+ * https://www.domco.us/
+ * @author Jason McCoy <jason@hoppedupdesigns.com>
+ * @version 1.0.0
+ * Copyright 2014. MIT licensed.
+ */
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+
+html,
+body,
+div,
+span,
+p,
+form {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1;
+}
+
+/**
+ * Variables
+ */
+
+/**
+ * Mixins
+ */
+
+/**
+ * logo styles
+ */
+
+.top-spacer {
+  height: 40px;
+  width: 100%;
+}
+
+.bar-container {
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+.top-bar {
+  height: 40px;
+  background: #363c40;
+}
+
+.logo-domco {
+  text-align: center;
+  position: relative;
+  padding-top: 7px;
+}
+
+/**
+ * sprite styles
+ */
+
+.sprite-logo-domco {
+  background-position: 0 -924px;
+  width: 239px;
+  height: 23px;
+}
+
+.login-images {
+  background-image: url("../img/sprites/logo_sprites.png");
+  margin: auto;
+}
+
+.vitacon {
+  background: url("../img/sprites/sprites_reg_2.svg") no-repeat;
+}
+
+/**
+ * login-form styles
+ */
+
+.container {
+  background: linear-gradient(to bottom, #f7f7f7 0%, #efefef 100%);
+  width: 320px;
+  height: auto;
+  border: 1px solid #505050;
+  border-radius: 2.4px;
+  position: absolute;
+  margin-top: -135px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: -160px;
+  top: 50%;
+  left: 50%;
+}
+
+.container * {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container #header,
+.container #content {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.container #header {
+  background: linear-gradient(to bottom, #f7f7f7 0%, #efefef 100%) repeat scroll 0 0 transparent;
+  border-bottom: 2px solid #a0a0a0;
+  -webkit-border-top-left-radius: 3.4px;
+  -moz-border-top-left-radius: 3.4px;
+  -ms-border-top-left-radius: 3.4px;
+  -o-border-top-left-radius: 3.4px;
+  -webkit-border-top-right-radius: 2.7px;
+  -moz-border-top-right-radius: 2.7px;
+  -ms-border-top-right-radius: 2.7px;
+  -o-border-top-right-radius: 2.7px;
+  -webkit-border-bottom-left-radius: 0.6px;
+  -moz-border-bottom-left-radius: 0.6px;
+  -ms-border-bottom-left-radius: 0.6px;
+  -o-border-bottom-left-radius: 0.6px;
+  height: 43px;
+  position: relative;
+  top: 1px;
+  width: 100%;
+}
+
+.container #header span {
+  display: block;
+  font-size: 19px;
+  font-weight: bold;
+  padding-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.container #content {
+  height: 90px;
+  margin: 20px 5px 5px 5px;
+}
+
+.vita-form {
+  display: inline-block;
+  width: auto;
+  float: left;
+}
+
+.vita-form input[type="text"],
+.vita-form input[type="password"] {
+  padding-left: 5px;
+  background-color: #FFF;
+  border: 1px solid #ADADAD;
+  border-radius: 3px;
+  height: 22px;
+  width: 200px;
+  float: left;
+}
+
+.vita-form input[type="text"]:focus,
+.vita-form input[type="password"]:focus {
+  border-color: #505050;
+}
+
+.sprite-input-container {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+.sprite-input-container .sprite-container {
+  border-left: 1px solid #505050;
+  width: 21px;
+  height: 18px;
+  float: right;
+  clear: both;
+  position: relative;
+  bottom: 21px;
+  right: 24px;
+}
+
+.sprite-input-container .sprite-container div {
+  left: 4px;
+  top: 1px;
+  position: relative;
+}
+
+.user {
+  background-position: 0 -24px;
+  width: 16px;
+  height: 15px;
+}
+
+.password {
+  background-position: 0 -43px;
+  width: 16px;
+  height: 8px;
+}
+
+#password {
+  margin-top: 10px;
+}
+
+.login-button {
+  background-position: -124px 0;
+  width: 24px;
+  height: 39px;
+  float: left;
+  position: relative;
+  top: 19px;
+  right: -28px;
+  -webkit-transform: scale(1.65);
+  -moz-transform: scale(1.65);
+  -ms-transform: scale(1.65);
+  -o-transform: scale(1.65);
+  transform: scale(1.65);
+  display: inline-block;
+}
+
+.centered-inputs {
+  position: relative;
+  top: 7px;
+  left: 35px;
+}
+
+.start {
+  text-align: center;
+  margin: 20px auto;
+}
+
+/*# sourceMappingURL=style.min.css.map */

@@ -1,0 +1,148 @@
+// Start of domco-template.html form styles
+.form, .a-form, .b-form {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+.a-form {
+    border: 5px solid rgba(200, 200, 200, 0.1);
+    border-radius: 8px;
+    width: 40%;
+    margin: auto;
+    height: auto;
+    min-width: 240px;
+}
+.a-form .form-container {
+    border: 2px solid #a0a0a0;
+    border-radius: 3.6px;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+}
+.a-form .form-container *:not(i) {
+    font-family: formFont;
+}
+.a-form .form-container .form-header {
+    background: #f7f7f7;
+    /* Old browsers */
+    
+    background: linear-gradient(to bottom, #f7f7f7 0%, #efefef 100%);
+    /* W3C */
+    
+    border-bottom-left-radius: 0.6px;
+    border-bottom: 2px solid #a0a0a0;
+    border-top-left-radius: 3.4px;
+    border-top-right-radius: 2.7px;
+    box-sizing: border-box;
+    height: 43px;
+    position: relative;
+    top: 1px;
+    width: 100%;
+}
+.a-form .form-container .form-header span {
+    font-weight: bold;
+    text-align: center;
+    font-size: 19px;
+    width: 100%;
+    display: block;
+    padding-top: 10px;
+}
+.a-form .form-container .form-content {
+    background: linear-gradient(to right, #f7f7f7 0%, #efefef 100%);
+    /* W3C */
+    
+    border-bottom-left-radius: 0.6px;
+    border-bottom-right-radius: 0.6px;
+    border-top: 1px solid #fff;
+    box-sizing: border-box;
+    height: auto;
+    position: relative;
+    width: 100%;
+}
+.b-form {
+    width: 25%;
+    min-width: 270px;
+    border-right: 2px solid #afafaf;
+}
+.b-form .form-container {
+    border-radius: 3.6px;
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+}
+.b-form .form-container *:not(i) {
+    font-family: formFont;
+}
+.b-form .form-container .form-header {
+    background: #f7f7f7;
+    /* Old browsers */
+    
+    background: linear-gradient(to bottom, #f7f7f7 0%, #efefef 100%);
+    /* W3C */
+    
+    border-bottom-left-radius: 0.6px;
+    border-bottom: 2px solid #a0a0a0;
+    border-top-left-radius: 3.4px;
+    border-top-right-radius: 2.7px;
+    box-sizing: border-box;
+    height: 43px;
+    position: relative;
+    top: 1px;
+    width: 100%;
+}
+.b-form .form-container .form-header span {
+    font-weight: bold;
+    text-align: center;
+    font-size: 19px;
+    width: 100%;
+    display: block;
+    padding-top: 10px;
+}
+.b-form .form-container .form-content {
+    background: linear-gradient(to right, #f7f7f7 0%, #efefef 100%);
+    /* W3C */
+    
+    border-bottom-left-radius: 0.6px;
+    border-bottom-right-radius: 0.6px;
+    border-top: 1px solid #fff;
+    box-sizing: border-box;
+    height: auto;
+    position: relative;
+    width: 100%;
+}
+.form-horizontal .hide, .form-inline .hide, .form-search .hide {
+    display: none;
+}
+// End of domco-template.html form styles
+
+// Start of input style for domco-template.html
+input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
+    color: rgb(185, 74, 72);
+    border-color: rgb(238, 95, 91);
+}
+input:focus:invalid:focus, select:focus:invalid:focus, textarea:focus:invalid:focus {
+    border-color: rgb(233, 50, 45);
+    -webkit-box-shadow: rgb(248, 185, 183) 0px 0px 6px;
+    box-shadow: rgb(248, 185, 183) 0px 0px 6px;
+}
+.input-append .dropdown-menu, .input-append .popover, .input-append .uneditable-input, .input-append input, .input-append select, .input-prepend .dropdown-menu, .input-prepend .popover, .input-prepend .uneditable-input, .input-prepend input, .input-prepend select {
+    font-size: 14px;
+}
+.input-append .add-on, .input-append .btn, .input-append .btn-group > .dropdown-toggle, .input-prepend .add-on, .input-prepend .btn, .input-prepend .btn-group > .dropdown-toggle {
+    vertical-align: top;
+    border-radius: 0px;
+}
+.input-append .active, .input-prepend .active {
+    border-color: rgb(70, 165, 70);
+    background-color: rgb(169, 219, 169);
+}
+.input-append .add-on:last-child, .input-append .btn-group:last-child > .dropdown-toggle, .input-append .btn:last-child {
+    border-radius: 0px 4px 4px 0px;
+}
+input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+// End of input style for domco-template.html
+

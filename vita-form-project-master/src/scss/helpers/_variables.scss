@@ -1,0 +1,14 @@
+/* 
+ * Custom Variables
+ *
+*/
+$container-max-width: em(2400);
+$page-container-background-color: #ddd;
+$mobile: new-breakpoint(max-width 500px 4);
+$body-font-family: 'Montserrat', 'Helvetica Neue', helvetica, arial, sans-serif;
+$body-font-size: 1em !default;
+$body-line-height: golden-ratio(1em, 1) !default;
+$vita-topbar-logo: #4b4b4b;
+$underline-link: underline;
+$helvetica: 'Helvetica Neue', helvetica, arial, sans-serif;
+$open-sans: 'Open Sans', helvetica, arial,sans-serif;

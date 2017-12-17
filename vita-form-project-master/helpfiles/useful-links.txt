@@ -1,0 +1,22 @@
+
+1. Sass Cheat Sheet: http://sass-cheatsheet.brunoscopelliti.com/
+
+2.  Node, Bower, Grunt Cheat Sheets: http://jessewarden.com/2013/09/node-bower-grunt-n00b-cheat-sheet.html
+
+3. Good article on Grunt: http://24ways.org/2013/grunt-is-not-weird-and-hard/
+
+4. Git Cheat Sheet: http://www.git-tower.com/blog/git-cheat-sheet/
+
+5. Good article that explains package.json: http://browsenpm.org/package.json
+
+6. AngularJS: https://angularjs.org/
+   https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js
+
+7. EmberJS cheat sheet:
+http://embersherpa.com/cheatsheet/
+
+8. Jekyll
+http://jekyllrb.com/docs/usage/
+
+9. Grunt Wiredep:
+https://github.com/stephenplusplus/grunt-wiredep

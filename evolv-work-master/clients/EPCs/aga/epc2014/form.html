@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>American Gastrological Association | Email Preference Center</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="http://www.highroadsolution.com/clients/aga/epc2014/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,600,700|Roboto:400,700' rel='stylesheet' type='text/css'>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('label').each(function(index) {
+            boxid = "#" + $(this).attr('for');
+            var cb = $(boxid);
+            if (cb.is(':disabled')) {
+                $(this).addClass("disabled");
+            }
+        });
+    });
+    </script>
+
+
+    <!--[if lt IE 9]>
+       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+       <script>window.html5 || document.write('<script src="http://www.highroadsolution.com/clients/sample/epc/js/html5shiv.js"><\/script>')</script>
+<![endif]-->
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- Header -->
+        <div id="header">
+            <div id="logo">
+                <img src="http://www.highroadsolution.com/clients/aga/epc2014/images/logo.jpg" alt="American Gastrological Association" width="384" height="117" />
+            </div>
+            <div id="title-bar">
+                <div id="heading">
+                    <div>
+                        <h1>Manage Your Email Preferences</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div id="content">
+            <!-- Email input -->
+            <div id="email" class="content">
+                <label for="emailaddress" class="emailaddy">
+                    <strong>Email Address</strong>
+                </label>
+                <input type="text" name="emailaddress" id="emailaddress" />
+                <p class="error">This email address already exists.</p>
+                <p class="note">Note: Changing your email address will update your member record.</p>
+            </div>
+
+            <!-- Main content -->
+            <div class="content content-main">
+                <div class="clearfix">
+                    <!-- Column 1 -->
+                    <div class="col1">
+                        <h2>Advocacy</h2>
+                        <table border="0" cellspacing="3" cellpadding="3" width="100%">
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkResearch" id="chkResearch" />
+                                </td>
+                                <td>
+                                    <label for="chkResearch">Advocacy - GI Research
+                                        <span class="sync-subscribe" id="chkResearchSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkResearchUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkPAC" id="chkPAC" />
+                                </td>
+                                <td>
+                                    <label for="chkPAC">
+                                        <strong>AGA PAC</strong>
+                                        <span class="sync-subscribe" id="chkPACSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkPACUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                        <h2>AGA Education</h2>
+                        <table border="0" cellspacing="3" cellpadding="3" width="100%">
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkResources" id="chkResources" />
+                                </td>
+                                <td>
+                                    <label for="chkResources">
+                                        <strong>Educational Resources</strong>
+                                        <span class="sync-subscribe" id="chkResourcesSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkResourcesUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkTraining" id="chkTraining" />
+                                </td>
+                                <td>
+                                    <label for="chkTraining">
+                                        <strong>GI Training</strong>
+                                        <span class="sync-subscribe" id="chkTrainingSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkTrainingUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkMeetings" id="chkMeetings" />
+                                </td>
+                                <td>
+                                    <label for="chkMeetings">
+                                        <strong>Live Meetings</strong>
+                                        <span class="sync-subscribe" id="chkMeetingsSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkMeetingsUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkOnlineEd" id="chkOnlineEd" />
+                                </td>
+                                <td>
+                                    <label for="chkOnlineEd">
+                                        <strong>Online Education</strong>
+                                        <span class="sync-subscribe" id="chkOnlineEdSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkOnlineEdUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                        <h2>AGA Practice Resources</h2>
+                        <table border="0" cellspacing="3" cellpadding="3" width="100%">
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkDHRP" id="chkDHRP" />
+                                </td>
+                                <td>
+                                    <label for="chkDHRP">
+                                        <strong>AGA - DHRP</strong>
+                                        <span class="sync-subscribe" id="chkDHRPSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkDHRPUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkPractice" id="chkPractice" />
+                                </td>
+                                <td>
+                                    <label for="chkPractice">
+                                        <strong>GI Practice & Quality</strong>
+                                        <span class="sync-subscribe" id="chkPracticeSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkPracticeUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkBooks" id="chkBooks" />
+                                </td>
+                                <td>
+                                    <label for="chkBooks">
+                                        <strong>Patient Education Books & Materials</strong>
+                                        <span class="sync-subscribe" id="chkBooksSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkBooksUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                        <h2>E-Newsletters</h2>
+                        <table border="0" cellspacing="3" cellpadding="3" width="100%">
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkEDigest" id="chkEDigest" />
+                                </td>
+                                <td>
+                                    <label for="chkEDigest">
+                                        <strong>AGA eDigest</strong>
+                                        <span class="sync-subscribe" id="chkEDigestSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkEDigestUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkManage" id="chkManage" />
+                                </td>
+                                <td>
+                                    <label for="chkManage">
+                                        <strong>AGA Quarterly: Practice Management</strong>
+                                        <span class="sync-subscribe" id="chkManageSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkManageUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkQuality" id="chkQuality" />
+                                </td>
+                                <td>
+                                    <label for="chkQuality">
+                                        <strong>AGA Quarterly: Quality</strong>
+                                        <span class="sync-subscribe" id="chkQualitySubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkQualityUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkEdUpdate" id="chkEdUpdate" />
+                                </td>
+                                <td>
+                                    <label for="chkEdUpdate">
+                                        <strong>Education Update</strong>
+                                        <span class="sync-subscribe" id="chkEdUpdateSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkEdUpdateUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="col2">
+                        <h2>Miscellaneous</h2>
+                        <table border="0" cellspacing="3" cellpadding="3" width="100%">
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkCareer" id="chkCareer" />
+                                </td>
+                                <td>
+                                    <label for="chkCareer">
+                                        <strong>Career-Related Information</strong>
+                                        <span class="sync-subscribe" id="chkCareerSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkCareerUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkGetInvolved" id="chkGetInvolved" />
+                                </td>
+                                <td>
+                                    <label for="chkGetInvolved">
+                                        <strong>Getting Involved with AGA</strong>
+                                        <span class="sync-subscribe" id="chkGetInvolvedSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkGetInvolvedUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                        <h2>Research</h2>
+                        <table border="0" cellspacing="3" cellpadding="3" width="100%">
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkFoundation" id="chkFoundation" />
+                                </td>
+                                <td>
+                                    <label for="chkFoundation">
+                                        <strong>AGA Research Foundation</strong>
+                                        <span class="sync-subscribe" id="chkFoundationSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkFoundationUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkAwards" id="chkAwards" />
+                                </td>
+                                <td>
+                                    <label for="chkAwards">
+                                        <strong>Research Awards</strong>
+                                        <span class="sync-subscribe" id="chkAwardsSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkAwardsUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                        <h2>Subject Matter</h2>
+                        <table border="0" cellspacing="3" cellpadding="3" width="100%">
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkBiliary" id="chkBiliary" />
+                                </td>
+                                <td>
+                                    <label for="chkBiliary">
+                                        <strong>Biliary Disorders</strong>
+                                        <span class="sync-subscribe" id="chkBiliarySubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkBiliaryUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkCancer" id="chkCancer" />
+                                </td>
+                                <td>
+                                    <label for="chkCancer">
+                                        <strong>Cancer Prevention and Treatment</strong>
+                                        <span class="sync-subscribe" id="chkCancerSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkCancerUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkGut" id="chkGut" />
+                                </td>
+                                <td>
+                                    <label for="chkGut">
+                                        <strong>Gut Microbiome</strong>
+                                        <span class="sync-subscribe" id="chkGutSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkGutUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkHepa" id="chkHepa" />
+                                </td>
+                                <td>
+                                    <label for="chkHepa">
+                                        <strong>Hepatology</strong>
+                                        <span class="sync-subscribe" id="chkHepaSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkHepaUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkLowerGI" id="chkLowerGI" />
+                                </td>
+                                <td>
+                                    <label for="chkLowerGI">
+                                        <strong>Lower GI Disorders & Procedures</strong>
+                                        <span class="sync-subscribe" id="chkLowerGISubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkLowerGIUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkObesity" id="chkObesity" />
+                                </td>
+                                <td>
+                                    <label for="chkObesity">
+                                        <strong>Obesity & Nutrition</strong>
+                                        <span class="sync-subscribe" id="chkObesitySubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkObesityUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkPanc" id="chkPanc" />
+                                </td>
+                                <td>
+                                    <label for="chkPanc">
+                                        <strong>Pancreatic Disorders & Procedures</strong>
+                                        <span class="sync-subscribe" id="chkPancSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkPancUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkPanBil" id="chkPanBil" />
+                                </td>
+                                <td>
+                                    <label for="chkPanBil">
+                                        <strong>Pancreaticobiliary Disorders</strong>
+                                        <span class="sync-subscribe" id="chkPanBilSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkPanBilUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkPediatric" id="chkPediatric" />
+                                </td>
+                                <td>
+                                    <label for="chkPediatric">
+                                        <strong>Pediatric Gastroenterology</strong>
+                                        <span class="sync-subscribe" id="chkPediatricSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkPediatricUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkProcedures" id="chkProcedures" />
+                                </td>
+                                <td>
+                                    <label for="chkProcedures">
+                                        <strong>Procedures</strong>
+                                        <span class="sync-subscribe" id="chkProceduresSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkProceduresUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkPeptides" id="chkPeptides" />
+                                </td>
+                                <td>
+                                    <label for="chkPeptides">
+                                        <strong>Regulatory Peptides</strong>
+                                        <span class="sync-subscribe" id="chkPeptidesSubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkPeptidesUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <input type="checkbox" name="chkUpperGI" id="chkUpperGI" />
+                                </td>
+                                <td>
+                                    <label for="chkUpperGI">
+                                        <strong>Upper GI Disorders & Procedures</strong>
+                                        <span class="sync-subscribe" id="chkUpperGISubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-green.gif" alt="Subscribing" width="97" height="17" align="absmiddle" />
+                                        </span>
+                                        <span class="sync-unsubscribe" id="chkUpperGIUnsubscribe">
+                                            <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                        </span>
+                                        <br />
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div id="unsubscribe" class="inner-content">
+                    <h2>Unsubscribe</h2>
+                    <table border="0" cellspacing="3" cellpadding="3" width="100%">
+                        <tr>
+                            <td valign="top">
+                                <input type="checkbox" name="chkOptOut" id="chkOptOut" />
+                            </td>
+                            <td>
+                                <label for="chkOptOut">
+                                    <strong>I wish to globally opt-out of all e-mail communications. AGA Members: This EXCLUDES correspondence pertaining to your membership.</strong>
+                                    <br/>
+                                    <span class="sync-unsubscribe" id="chkOptOutUnsubscribe">
+                                        <img src="http://www.highroadsolution.com/clients/sample/epc/images/sync-red.gif" alt="Unsubscribing" width="110" height="17" align="absmiddle" />
+                                    </span>
+                                    <br />
+                                </label>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="confirm">
+                    <input type="submit" name="cmdOptOut" id="cmdOptOut" value="Confirm Opt-Out" class="button" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <div id="footer-top">
+                <div class="footer" align="left">
+                    <div class="inner-footer">
+                        <div id="logo-small">
+                            <img src="http://www.highroadsolution.com/clients/aga/epc2014/images/logo-small.jpg" width="88" height="88">
+                        </div>
+                        <div id="contact">
+                            <div id="phone">
+                                <img src="http://www.highroadsolution.com/clients/aga/epc2014/images/phone.jpg">301-654-2055
+                            </div>
+                            <div id="address">
+                                <img src="http://www.highroadsolution.com/clients/aga/epc2014/images/map.jpg">4930 Del Ray Avenue, Bethesda, MD 20814
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer-bottom">
+                <div class="footer" align="left">
+                    <div class="inner-footer">
+                        <div id="privacy" class="col1">
+                            <a href="http://www.gastro.org/privacy-policy">Privacy Policy</a>&nbsp;|&nbsp;<a href="#">Terms of Use</a>
+                        </div>
+                        <div id="copyright" class="col2">
+                            &copy;2014 American Gastroenterological Association
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+    window.jQuery || document.write('<script src="http://www.highroadsolution.com/clients/sample/epc/js/jquery-2.1.1.min.js"><\/script>')
+    </script>
+</body>
+
+</html>

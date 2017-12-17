@@ -1,0 +1,9 @@
+<!-- ROW 7 -->
+<tr>
+    <td>
+        <!-- IN-HOUSE AD #1 (LEFT) -->
+        <img src="images/finished_images/ad.jpg" alt="in-house ad left" width="275" height="129" /> 
+        <!-- IN-HOUSE AD #2 (RIGHT) -->
+        <img src="images/finished_images/ad.jpg" alt="in-house ad right" width="275" height="129" /> 
+    </td>
+</tr>

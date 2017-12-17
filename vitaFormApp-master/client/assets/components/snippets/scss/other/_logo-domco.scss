@@ -1,0 +1,35 @@
+.top-spacer {
+    height: 40px;
+    width: 100%;
+}
+.bar-container {
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+.top-spacer {
+    height: 40px;
+    width: 100%;
+}
+.top-bar {
+    height: 40px;
+    background: #363c40;
+}
+.logo-domco {
+    text-align: center;
+    position: relative;
+    padding-top: 7px;
+}
+.sprite-logo-domco {
+    background-position: 0 -924px;
+    width: 239px;
+    height: 23px;
+}
+.login-images {
+    background-image: url("../img/sprites/logo_sprites.png");
+    margin: auto;
+}

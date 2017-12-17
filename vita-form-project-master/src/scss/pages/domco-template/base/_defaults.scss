@@ -1,0 +1,19 @@
+// Global defaults for general sections of all pages
+
+// Start of global defaults
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    padding: 50px 0 0;
+    color: #333;
+    background: linear-gradient(to right, #f7f7f7 0%, #efefef 100%);
+    font-family: $body-font-family;
+    font-size: 1em;
+    overflow-x: hidden;
+    height: 100%;
+}
+// End of global defaults

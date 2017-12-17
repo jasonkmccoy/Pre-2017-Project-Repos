@@ -1,0 +1,316 @@
+// Start of chat-widget styles
+body {
+    overflow-x: hidden;
+}
+/***************************
+****************************
+
+Customer Chat Widget
+
+****************************
+***************************/
+
+.customer-chat-widget {
+    border-color: rgb(51, 51, 51);
+    height: auto;
+    margin-right: -330px;
+    overflow: hidden;
+    position: fixed;
+    right: 1px;
+    top: 19%;
+    width: 370px;
+    z-index: 1000;
+}
+/***************************
+****************************
+
+CHAT CSS : HEADER 
+
+****************************
+***************************/
+
+.customer-chat-header {
+    background: none repeat scroll 0 0 #36a9e1;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #ffffff;
+    height: 55px;
+    position: relative;
+    width: 89%;
+    float: right;
+}
+.customer-chat-header-title {
+    display: block;
+    font-size: 16px;
+    line-height: 55px;
+    margin-left: 18px;
+    padding-left: 4px;
+    width: 81px;
+}
+#customer-chat-content-send {
+    height: 23px !important;
+}
+/***************************
+****************************
+
+CHAT CSS : FORM
+
+****************************
+***************************/
+
+#customer-chat-content-contact-form {
+    background-color: #FFF;
+}
+.customer-chat-content {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-color: -moz-use-text-color #ddd #ddd;
+    border-color: #ddd;
+    border-image: none;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    float: right;
+    width: 88.5%;
+}
+/***************************
+****************************
+
+CHAT CSS : Content Notifications
+
+****************************
+***************************/
+
+.customer-chat-content-info {
+    display: block;
+    font-size: 13px;
+    height: 80px;
+    overflow: hidden;
+    padding: 20px !important;
+    width: 90%;
+    position: relative;
+}
+/* Notification Image : START */
+
+#notification_placeholder {
+    background-image: url("../img/sprites/chat_sprites_small.svg");
+    background-repeat: no-repeat;
+}
+.admin-offline-img {
+    background-position: 0 -56px;
+    height: 53px;
+    left: 18px;
+    position: absolute;
+    top: 28px;
+    width: 51.4px;
+}
+.admin-online-img {
+    background-position: 0 0;
+    height: 53px;
+    left: 18px;
+    position: absolute;
+    top: 18px;
+    width: 51.4px;
+}
+/* Notification Image : STOP */
+/* Notification Content : START */
+
+.chat-content {
+    float: left;
+    position: relative;
+    font-size: 19px;
+}
+.info-online {
+    left: 52px;
+    position: relative;
+    top: 16px;
+    width: 225px;
+}
+.info-offline {
+    left: 52px;
+    position: relative;
+    top: 16px;
+    width: 225px;
+}
+.user-todo-success {
+    float: left;
+    font-size: 12px !important;
+    left: 19px;
+    position: relative;
+    top: 50px;
+    width: 250px;
+}
+.user-todo-error {
+    float: left;
+    font-size: 12px !important;
+    left: 56px;
+    position: relative;
+    top: 50px;
+    width: 250px;
+}
+/* Notification Content : STOP */
+
+.customer-chat-content-message-input {
+    position: relative;
+    padding: 20px;
+    height: 51px;
+    margin-top: -1px;
+    padding-top: 1px;
+    background: #fff;
+    padding-bottom: 2px;
+}
+.customer-chat-content-message-textarea {
+    background: none repeat scroll 0 0 #fff;
+    height: 51px;
+    margin-top: -1px;
+    padding: 1px 20px 2px;
+    position: relative;
+}
+.customer-chat-content-message-input-field {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom: 1px solid #eee;
+    border-image: none;
+    border-left: 3px solid #36a9e1 !important;
+    border-radius: 3px;
+    border-right: 1px solid #eee;
+    border-top: 1px solid #eee;
+    box-sizing: border-box;
+    font-size: 12.5px !important;
+    font-weight: 400 !important;
+    outline: medium none;
+    overflow: hidden;
+    padding: 10px;
+    resize: none;
+    width: 100%;
+}
+.customer-chat-content-row {
+    padding: 0 20px 20px;
+    margin-top: 25px;
+}
+.customer-chat-content-button {
+    background: #86c953;
+    border-bottom: 2px solid 76b447;
+    color: #FFFFFF;
+    display: block;
+    position: relative;
+    padding: 8px 22px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    height: 23px !important;
+    vertical-align: center;
+}
+#chat-side-tab {
+    cursor: pointer;
+    height: 165px;
+    left: 1.5px;
+    position: absolute;
+    top: 28%;
+    width: 40px;
+}
+#loading-gif {
+    position: absolute;
+    top: 90px;
+    left: 180px;
+}
+/***************************
+****************************
+ HELPER CLASSES
+****************************
+***************************/
+
+.hide-on-load {
+    visibility: hidden !important;
+    display: none !important;
+}
+.textarea-ph-padding {
+    padding: 20px 0 0 10px !important;
+    resize: none;
+}
+.textarea-ph-focus {
+    padding: 5px 0px 0px 5px !important;
+}
+.textarea-chat-box {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-left: 1px solid #eee !important;
+    position: relative;
+}
+.send-button-chat-box {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+#message-textarea {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom: 1px solid #eee;
+    border-image: none;
+    border-left: 3px solid #36a9e1;
+    border-radius: 3px;
+    border-right: 1px solid #eee;
+    border-top: 1px solid #eee;
+    box-sizing: border-box;
+    font-size: 12.5px !important;
+    font-weight: 400 !important;
+    height: 63px;
+    outline: medium none;
+    overflow: auto;
+    resize: none;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+/***************************
+****************************
+  
+   These are the styles for
+    Transform to Chatbox
+
+****************************
+***************************/
+
+.resize-textarea {
+    height: 78px !important;
+}
+#chat-window {
+    position: relative;
+    height: 0px;
+    width: 99.3%;
+    top: -277px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-color: rgb(238, 238, 238);
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    z-index: 0;
+}
+#window-header {
+    background-color: #e6e6e6;
+    height: 10%;
+    position: relative;
+    width: 100%;
+}
+#status-message {
+    font-size: 13px;
+    font-weight: 500;
+    left: 3%;
+    position: relative;
+    top: 5%;
+}
+.collapsed-window {
+    border: none !important;
+    visibility: hidden;
+}
+// End of chat widget styles

@@ -1,0 +1,19 @@
+// copy and replace this section at the bottom of Gruntfile.js
+
+
+
+  /**
+   * Build task
+   * Run `grunt build` on the command line
+   * Then compress all JS/CSS files
+   */
+  grunt.registerTask('build', [
+    'sass:dist',
+    'jshint',
+    'uglify',
+    'uncss',
+    'clean',
+    'cssmin',
+    'imagemin',
+    'grunt-responsive-images'
+  ]);

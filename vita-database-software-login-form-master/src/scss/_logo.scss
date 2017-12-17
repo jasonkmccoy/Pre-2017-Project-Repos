@@ -1,0 +1,29 @@
+/* Styles for top logo bar */
+
+.top-spacer {
+    height: 40px;
+    width: 100%;
+}
+
+.bar-container {
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.top-bar {
+    height: 40px;
+    background: #363c40;
+}
+
+.logo-domco {
+    text-align: center;
+    position: relative;
+    padding-top: 7px;
+}
+
+

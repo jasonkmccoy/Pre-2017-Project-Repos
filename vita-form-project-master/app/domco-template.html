@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home&nbsp;&ndash;&nbsp;PROJECT&nbsp;WEBSITE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="project website description goes here">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="assets/img/favicons/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="assets/img/favicons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="assets/img/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-144x144.png">
+    <!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <!-- GOOGLE ANALYTICS -->
+    <link href="http://www.google-analytics.com" rel="dns-prefetch">
+    <link href="http:/ajax.googleapis.com" rel="dns-prefetch">
+    <!-- MODERNIZR -->
+    <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="assets/components/modernizr.js"><\/script>')
+    </script>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+    var loadedGif = "assets/img/default-loader.gif";
+    var maxChatBody = 255;
+    </script>
+
+
+    <!------------------------------------------- START : Chat Widget --------------------------------------------------->
+    <div style="margin-right: -330px;" class="customer-chat customer-chat-widget contact-form" id="customer-chat-widget">
+
+        <!-- START : Header -->
+        <div class="customer-chat-header">
+            <div class="customer-chat-header-title">
+                Contact Us
+            </div>
+            <div class="customer-chat-header-indicator">
+                Contact Us
+            </div>
+            <div class="customer-chat-header-title" id="customer-chat-button">
+            </div>
+        </div>
+        <!-- END   : Header -->
+
+        <!-- START : Content -->
+        <div class="customer-chat-content" id="customer-chat-content-contact-form">
+            <div class="customer-chat-content-info chat_slider_el" style="left: 0px;">
+
+                <!-- Error Notification Content -->
+                <span id="error-info-message" class="chat-content hide-on-load">
+                    <span class="display-chat-response info-offline">
+                      Chat System is offline
+                    </span>
+                <span class="user-todo-error">
+                      Please submit a support ticket.
+                    </span>
+                </span>
+
+                <!-- Success Notification Content -->
+                <span id="success-info-message" class="chat-content hide-on-load">
+                    <span class="display-chat-response info-online">
+                      Welcome to Live Chat!
+                    </span>
+                <span class="user-todo-success">
+                      To start a live chat, provide us the following:
+                    </span>
+                </span>
+
+                <!-- Notification Image -->
+                <div class="admin-offline-img hide-on-load" id="notification_placeholder"></div>
+
+            </div>
+
+            <!-- Loading Gif -->
+            <img src="assets/img/default-loader.gif" class="hide-on-load" id="loading-gif">
+
+            <!-- Input / Textarea Fields -->
+            <div class="customer-chat-content-message-input chat_slider_el" style="left: 0px;">
+                <input type="text" class="customer-chat-content-message-input-field" placeholder="Name" name="name">
+            </div>
+
+            <div class="customer-chat-content-message-input chat_slider_el" style="left: 0px;">
+                <input type="text" placeholder="Email" class="customer-chat-content-message-input-field" name="email">
+            </div>
+
+            <div class="customer-chat-content-message-textarea">
+                <textarea style="top: 0px;" id="message-textarea" name="message" class="customer-chat-content-message-input-field textarea-ph-padding" placeholder="Message"></textarea>
+                <div id="chat-window" style="top: 0px; height: 0px;" class="collapsed-window">
+                    <div id="window-header">
+                        <span id="status-message">Status: In Queue</span>
+                    </div>
+                    <div id="window-display"></div>
+                </div>
+            </div>
+
+            <!-- Send Button -->
+            <div class="customer-chat-content-row">
+                <a src="#" class="customer-chat-content-button" id="customer-chat-contact-send">
+                    Send
+                  </a>
+            </div>
+        </div>
+        <!-- END   : Content -->
+
+        <!-- START : Side Tab -->
+        <div id="chat-side-tab">
+            <img src="img/chat-tab.svg" id="chat-tab-image">
+        </div>
+        <!-- END   : Side Tab -->
+
+    </div>
+    <!------------------------------------------- END : Chat Widget --------------------------------------------------->
+
+
+    <!-- Page Container -->
+    <div id="page-container">
+        <!-- Header -->
+        <!-- Add the class .navbar-fixed-top or .navbar-fixed-bottom for a fixed header on top or bottom respectively -->
+        <!-- <header class="navbar navbar-inverse navbar-fixed-top"> -->
+        <!-- <header class="navbar navbar-inverse navbar-fixed-bottom"> -->
+        <!-- STATIC -->
+        <header class="navbar navbar-inverse">
+            <!-- Navbar Inner -->
+            <div class="navbar-inner remove-radius remove-box-shadow">
+                <!-- div#container-fluid -->
+                <div class="container-fluid">
+                    <!-- Mobile Navigation, Shows up  on smaller screens -->
+                    <ul class="nav pull-right visible-phone visible-tablet">
+                        <li class="divider-vertical remove-margin"></li>
+                        <li>
+                            <!-- It is set to open and close the main navigation on smaller screens. The class .nav-collapse was added to aside#page-sidebar -->
+                            <a href="javascript:void(0)" data-toggle="collapse" data-target=".nav-collapse">
+                                <i class="icon-reorder"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- END Mobile Navigation -->
+
+                    <!-- Logo -->
+                    <a href="index.php" class="brand"><img src="assets/img/small-vita-logo.png" alt="logo">
+                    </a>
+
+                    <!-- Loading Indicator, Used for demostrating how loading of widgets could happen, check main.js - uiDemo() -->
+                    <div id="loading" class="hide pull-left"><i class="icon-certificate icon-spin"></i>
+                    </div>
+
+                    <!-- Header Widgets -->
+                    <!-- You can create the widgets you want by replicating the following. Each one exists in a <li> element -->
+                    <ul id="widgets" class="nav pull-right">
+
+                        <!-- User Menu -->
+
+                        <li class="dropdown dropdown-user">
+                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/avatar.png" alt="avatar"> <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- Just a button demostrating how loading of widgets could happen, check main.js- - uiDemo() -->
+                                <li>
+                                    <a href="#" class="loading-on" onClick="location.reload();"><i class="icon-refresh"></i> Refresh</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="logout.php" class="exit"><i class="icon-lock"></i> Log out</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- END User Menu -->
+
+                    </ul>
+                    <!-- END Header Widgets -->
+                </div>
+                <!-- END div#container-fluid -->
+            </div>
+            <!-- END Navbar Inner -->
+        </header>
+        <!-- STATIC HEADER END -->
+        <!-- END Header -->
+
+        <!-- Inner Container -->
+        <div id="inner-container">
+            <!-- Sidebar -->
+            <aside id="page-sidebar" class="nav-collapse collapse">
+
+                <!-- Primary Navigation -->
+                <nav id="primary-nav">
+                    <ul>
+                        <li><a href="index.php" class="active"><i class="icon-home"></i> Home</a>
+                        </li>
+                        <li><a href="#"><i class='icon-unlock-alt'></i> Administrator</a>
+                            <ul>
+                                <li><a href="index.php?view=Y1AbfU70"><i class="icon-user"></i> Create User</a>
+                                </li>
+                                <li><a href="index.php?view=Y0Z2CGt1"><i class="icon-reorder"></i> Build Tabs</a>
+                                </li>
+                                <li><a href="index.php?view=7zdyzi42"><i class="icon-th"></i> Sort Tabs</a>
+                                </li>
+                                <li><a href="index.php?view=77k81bbs"><i class="icon-list-alt"></i> Create Page</a>
+                                </li>
+                                <li><a href="index.php?view=X1XyXWOg"><i class="icon-picture"></i> Company Logo</a>
+                                </li>
+                                <li><a href="index.php?view=3Ai0850H"><i class="icon-key"></i> Permissions</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- END Primary Navigation -->
+
+            </aside>
+            <!-- END Sidebar -->
+
+            <div id="page-content">
+                <ul id="nav-info" class="clearfix">
+                    <li><a href="index.php"><i class="icon-home"></i></a>
+                    </li>
+                </ul>
+
+                <div class="company-logo">
+                    <img src="assets/img/domco-logo.png" alt="company logo">
+                </div>
+                <ul class="nav-dash">
+                    <li><a href="index.php?view=77k81bbs" data-toggle="tooltip" title="Create Page"><i class="icon-list-alt"></i></a>
+                    </li>
+                    <li><a href="index.php?view=Y1AbfU70" data-toggle="tooltip" title="Create User"><i class="icon-user"></i></a>
+                    </li>
+                    <li><a href="index.php?view=Y0Z2CGt1" data-toggle="tooltip" title="Build Tabs"><i class="icon-reorder"></i></a>
+                    </li>
+                    <li><a href="index.php?view=7zdyzi42" data-toggle="tooltip" title="Sort Tabs"><i class="icon-th"></i></a>
+                    </li>
+                    <li><a href="index.php?view=X1XyXWOg" data-toggle="tooltip" title="Company Logo"><i class="icon-picture"></i></a>
+                    </li>
+                    <li><a href="index.php?view=3Ai0850H" data-toggle="tooltip" title="Permissions"><i class="icon-key"></i></a>
+                    </li>
+                </ul>
+                <!--- Construct View --->
+
+
+                <!-- End Construct View --->
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <span id="year-copy"></span> &copy; <strong><a href="https://domco.us">Domco Technology</a></strong>
+            </footer>
+            <!-- END Footer -->
+
+        </div>
+        <!-- END Inner Container -->
+    </div>
+    <!-- END Page Container -->
+
+    <!-- Scroll to top link, check main.js - scrollToTop() -->
+    <a href="#top" id="to-top"><i class="icon-chevron-up"></i></a>
+
+    <!-- SCRIPTS -->
+    <script src="assets/components/jquery.js"><\/script>
+    <!-- Excanvas for Flot (Charts plugin) support on IE8 -->
+    <!--[if lte IE 8]><script src="assets/components/flot/excanvas.min.js"></script><![endif]-->
+    <!-- jQuery UI library from Google ... -->
+   <script src="assets/components/jquery-ui/jquery-ui.min.js"><\/script>
+    <script type="text/javascript" src="assets/components/bootstrap.min.js"></script>
+    <!-- custom Domco plugins -->
+    <script type="text/javascript" src="assets/components/plugins.min.js"></script>
+    <script type="text/javascript" src="assets/componentsmain.js"></script>
+    <script type="text/javascript" src="assets/components/widget.js"></script>
+
+</body>
+
+</html>

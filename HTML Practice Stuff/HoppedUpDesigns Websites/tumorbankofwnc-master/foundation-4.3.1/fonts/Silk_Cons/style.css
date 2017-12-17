@@ -1,0 +1,387 @@
+@font-face {
+	font-family: 'silkcons';
+	src:url('fonts/silkcons.eot');
+	src:url('fonts/silkcons.eot?#iefix') format('embedded-opentype'),
+		url('fonts/silkcons.woff') format('woff'),
+		url('fonts/silkcons.ttf') format('truetype'),
+		url('fonts/silkcons.svg#silkcons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'silkcons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-expand, .icon-expand-2, .icon-shrink, .icon-shrink-2, .icon-plus, .icon-minus, .icon-notes, .icon-notebook, .icon-popout, .icon-popout-2, .icon-arrow-down, .icon-arrow-up, .icon-arrow-left, .icon-arrow-right, .icon-arrow-down-2, .icon-arrow-up-2, .icon-arrow-left-2, .icon-arrow-right-2, .icon-target, .icon-clock, .icon-cloud, .icon-cloud-2, .icon-mobile, .icon-expand-3, .icon-contract, .icon-chart, .icon-checkmark, .icon-cancel, .icon-enter, .icon-exit, .icon-download, .icon-upload, .icon-heart, .icon-heart-2, .icon-heart-3, .icon-vector, .icon-vector-2, .icon-star, .icon-star-half, .icon-star-empty, .icon-eraser, .icon-pencil, .icon-calendar, .icon-marker, .icon-arrow, .icon-arrow-2, .icon-undo, .icon-redo, .icon-console, .icon-picture, .icon-droplet, .icon-droplet-2, .icon-arrow-up-3, .icon-arrow-down-3, .icon-arrow-left-3, .icon-arrow-right-3, .icon-pictures, .icon-frame, .icon-cloud-play, .icon-cover-flow, .icon-columns, .icon-list, .icon-icons, .icon-home, .icon-office, .icon-camera, .icon-redo-2, .icon-refresh, .icon-undo-2, .icon-credit-card, .icon-podcast, .icon-share, .icon-calculator, .icon-play, .icon-search, .icon-chat, .icon-umbrella, .icon-drops, .icon-sun, .icon-battery-empty, .icon-battery-charging, .icon-battery-low, .icon-battery, .icon-battery-full, .icon-battery-warning, .icon-grass, .icon-food, .icon-pointer, .icon-drawer, .icon-envelope, .icon-rainbow, .icon-trashcan, .icon-lollipop, .icon-contrast, .icon-crop, .icon-stamp, .icon-boat, .icon-puzzle, .icon-tshirt, .icon-yinyang, .icon-watch, .icon-bars, .icon-wand, .icon-music, .icon-music-2, .icon-checklist, .icon-notes-2, .icon-power, .icon-folder, .icon-broadcast, .icon-locked, .icon-unlocked, .icon-desktop, .icon-warning, .icon-happy, .icon-fence {
+	font-family: 'silkcons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-expand:before {
+	content: "\e000";
+}
+.icon-expand-2:before {
+	content: "\e001";
+}
+.icon-shrink:before {
+	content: "\e002";
+}
+.icon-shrink-2:before {
+	content: "\e003";
+}
+.icon-plus:before {
+	content: "\e004";
+}
+.icon-minus:before {
+	content: "\e005";
+}
+.icon-notes:before {
+	content: "\e006";
+}
+.icon-notebook:before {
+	content: "\e007";
+}
+.icon-popout:before {
+	content: "\e008";
+}
+.icon-popout-2:before {
+	content: "\e009";
+}
+.icon-arrow-down:before {
+	content: "\e00a";
+}
+.icon-arrow-up:before {
+	content: "\e00b";
+}
+.icon-arrow-left:before {
+	content: "\e00c";
+}
+.icon-arrow-right:before {
+	content: "\e00d";
+}
+.icon-arrow-down-2:before {
+	content: "\e00e";
+}
+.icon-arrow-up-2:before {
+	content: "\e00f";
+}
+.icon-arrow-left-2:before {
+	content: "\e010";
+}
+.icon-arrow-right-2:before {
+	content: "\e011";
+}
+.icon-target:before {
+	content: "\e012";
+}
+.icon-clock:before {
+	content: "\e013";
+}
+.icon-cloud:before {
+	content: "\e014";
+}
+.icon-cloud-2:before {
+	content: "\e015";
+}
+.icon-mobile:before {
+	content: "\e016";
+}
+.icon-expand-3:before {
+	content: "\e017";
+}
+.icon-contract:before {
+	content: "\e018";
+}
+.icon-chart:before {
+	content: "\e019";
+}
+.icon-checkmark:before {
+	content: "\e01a";
+}
+.icon-cancel:before {
+	content: "\e01b";
+}
+.icon-enter:before {
+	content: "\e01c";
+}
+.icon-exit:before {
+	content: "\e01d";
+}
+.icon-download:before {
+	content: "\e01e";
+}
+.icon-upload:before {
+	content: "\e01f";
+}
+.icon-heart:before {
+	content: "\e020";
+}
+.icon-heart-2:before {
+	content: "\e021";
+}
+.icon-heart-3:before {
+	content: "\e022";
+}
+.icon-vector:before {
+	content: "\e023";
+}
+.icon-vector-2:before {
+	content: "\e024";
+}
+.icon-star:before {
+	content: "\e025";
+}
+.icon-star-half:before {
+	content: "\e026";
+}
+.icon-star-empty:before {
+	content: "\e027";
+}
+.icon-eraser:before {
+	content: "\e028";
+}
+.icon-pencil:before {
+	content: "\e029";
+}
+.icon-calendar:before {
+	content: "\e02a";
+}
+.icon-marker:before {
+	content: "\e02b";
+}
+.icon-arrow:before {
+	content: "\e02c";
+}
+.icon-arrow-2:before {
+	content: "\e02d";
+}
+.icon-undo:before {
+	content: "\e02e";
+}
+.icon-redo:before {
+	content: "\e02f";
+}
+.icon-console:before {
+	content: "\e030";
+}
+.icon-picture:before {
+	content: "\e031";
+}
+.icon-droplet:before {
+	content: "\e032";
+}
+.icon-droplet-2:before {
+	content: "\e033";
+}
+.icon-arrow-up-3:before {
+	content: "\e034";
+}
+.icon-arrow-down-3:before {
+	content: "\e035";
+}
+.icon-arrow-left-3:before {
+	content: "\e036";
+}
+.icon-arrow-right-3:before {
+	content: "\e037";
+}
+.icon-pictures:before {
+	content: "\e038";
+}
+.icon-frame:before {
+	content: "\e039";
+}
+.icon-cloud-play:before {
+	content: "\e03a";
+}
+.icon-cover-flow:before {
+	content: "\e03b";
+}
+.icon-columns:before {
+	content: "\e03c";
+}
+.icon-list:before {
+	content: "\e03d";
+}
+.icon-icons:before {
+	content: "\e03e";
+}
+.icon-home:before {
+	content: "\e03f";
+}
+.icon-office:before {
+	content: "\e040";
+}
+.icon-camera:before {
+	content: "\e041";
+}
+.icon-redo-2:before {
+	content: "\e042";
+}
+.icon-refresh:before {
+	content: "\e043";
+}
+.icon-undo-2:before {
+	content: "\e044";
+}
+.icon-credit-card:before {
+	content: "\e045";
+}
+.icon-podcast:before {
+	content: "\e046";
+}
+.icon-share:before {
+	content: "\e047";
+}
+.icon-calculator:before {
+	content: "\e048";
+}
+.icon-play:before {
+	content: "\e049";
+}
+.icon-search:before {
+	content: "\e04a";
+}
+.icon-chat:before {
+	content: "\e04b";
+}
+.icon-umbrella:before {
+	content: "\e04c";
+}
+.icon-drops:before {
+	content: "\e04d";
+}
+.icon-sun:before {
+	content: "\e04e";
+}
+.icon-battery-empty:before {
+	content: "\e04f";
+}
+.icon-battery-charging:before {
+	content: "\e050";
+}
+.icon-battery-low:before {
+	content: "\e051";
+}
+.icon-battery:before {
+	content: "\e052";
+}
+.icon-battery-full:before {
+	content: "\e053";
+}
+.icon-battery-warning:before {
+	content: "\e054";
+}
+.icon-grass:before {
+	content: "\e055";
+}
+.icon-food:before {
+	content: "\e056";
+}
+.icon-pointer:before {
+	content: "\e057";
+}
+.icon-drawer:before {
+	content: "\e058";
+}
+.icon-envelope:before {
+	content: "\e059";
+}
+.icon-rainbow:before {
+	content: "\e05a";
+}
+.icon-trashcan:before {
+	content: "\e05b";
+}
+.icon-lollipop:before {
+	content: "\e05c";
+}
+.icon-contrast:before {
+	content: "\e05d";
+}
+.icon-crop:before {
+	content: "\e05e";
+}
+.icon-stamp:before {
+	content: "\e05f";
+}
+.icon-boat:before {
+	content: "\e060";
+}
+.icon-puzzle:before {
+	content: "\e061";
+}
+.icon-tshirt:before {
+	content: "\e062";
+}
+.icon-yinyang:before {
+	content: "\e063";
+}
+.icon-watch:before {
+	content: "\e064";
+}
+.icon-bars:before {
+	content: "\e065";
+}
+.icon-wand:before {
+	content: "\e066";
+}
+.icon-music:before {
+	content: "\e067";
+}
+.icon-music-2:before {
+	content: "\e068";
+}
+.icon-checklist:before {
+	content: "\e069";
+}
+.icon-notes-2:before {
+	content: "\e06a";
+}
+.icon-power:before {
+	content: "\e06b";
+}
+.icon-folder:before {
+	content: "\e06c";
+}
+.icon-broadcast:before {
+	content: "\e06d";
+}
+.icon-locked:before {
+	content: "\e06e";
+}
+.icon-unlocked:before {
+	content: "\e06f";
+}
+.icon-desktop:before {
+	content: "\e070";
+}
+.icon-warning:before {
+	content: "\e071";
+}
+.icon-happy:before {
+	content: "\e072";
+}
+.icon-fence:before {
+	content: "\e073";
+}

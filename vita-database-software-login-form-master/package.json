@@ -1,0 +1,35 @@
+{
+  "name": "Vita Database Software Login Form",
+  "title": "Vita Database Software Login Form",
+  "url": "https://www.domco.us/vita13/",
+  "author": "Jason McCoy",
+  "copyright": "2014",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jason-hoppedupdesigns/vita-database-software-login-form.git"
+  },
+  "devDependencies": {
+    "connect-livereload": "~0.2.0",
+    "grunt": "~0.4.1",
+    "grunt-bump": "0.0.16",
+    "grunt-concurrent": "^1.0.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-coffee": "^0.12.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-sass": "~0.5.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-dev-update": "^0.9.0",
+    "grunt-notify": "^0.3.1",
+    "grunt-open": "~0.2.0",
+    "grunt-processhtml": "^0.3.3",
+    "grunt-uncss": "^0.3.7",
+    "load-grunt-tasks": "^1.0.0",
+    "matchdep": "~0.1.2",
+    "time-grunt": "^1.0.0"
+  }
+}
